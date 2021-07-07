@@ -19,13 +19,4 @@ export const ContainerInput = styled.div`
       width: 100%;
     }
   }
-
-  /*   input {
-    width: 100%;
-    padding: 8px;
-
-    border: none;
-    background-color: transparent;
-    color: #78848d;
-  } */
 `;
