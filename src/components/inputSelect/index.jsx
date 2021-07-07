@@ -1,12 +1,9 @@
 import { ContainerInput } from "./style";
 
-const InputSelect = () => {
+const InputSelect = ({ children }) => {
   return (
     <ContainerInput>
-      <select>
-        <option value=""></option>
-        <option value="">valor</option>
-      </select>
+      <select>{children}</select>
     </ContainerInput>
   );
 };

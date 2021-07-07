@@ -1,9 +1,9 @@
 import { ContainerInput } from "./style";
 
-const Input = ({ placeholder, tipo }) => {
+const Input = ({ placeholder, type }) => {
   return (
     <ContainerInput>
-      <input type={tipo} placeholder={placeholder} />
+      <input type={type} placeholder={placeholder} />
     </ContainerInput>
   );
 };

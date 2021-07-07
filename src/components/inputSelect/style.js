@@ -8,7 +8,7 @@ export const ContainerInput = styled.div`
   background-color: #f0f0fa;
 
   select {
-    width: 95%;
+    width: 100%;
     padding: 8px;
 
     border: none;
