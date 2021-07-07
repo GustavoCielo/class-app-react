@@ -4,7 +4,6 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>Hi Lorena</h1>
     </>
   );
 }
