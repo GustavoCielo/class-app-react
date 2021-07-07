@@ -1,5 +1,5 @@
 import GlobalStyle from "./styles/global";
-import InputText from "./components/inputText";
+import Input from "./components/input";
 import InputSelect from "./components/inputSelect";
 import InputDate from "./components/inputDate";
 import InputTextArea from "./components/inputTextArea";
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <InputText>teste</InputText>
+      <Input tipo={"password"} placeholder="senha" />
       <InputSelect />
       <InputDate />
       <InputTextArea />
