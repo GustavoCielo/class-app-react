@@ -9,12 +9,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-       
+       --blue: #003F66
+    }
+
+    #root  {
+        height: 100vh;
     }
 
     body {
         font-size: 16px;
         -webkit-font-smoothing: antialiased !important;
+        height: 100vh;
     }
 
     h1,h2,h3,h4,h5,h6 {
