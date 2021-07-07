@@ -8,15 +8,18 @@ const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
-    :root {
-       --blue: #003F66
-    }
-
-    #root  {
+    #root {
         height: 100vh;
     }
+    
+    :root {
+       --primary-background: #ffffff,
+       --secondary-background: #003F66,
+       --orange-background: #F35D56,
+       --gray-background: #d6d6ef
+    }
 
-    body {
+    body { 
         font-size: 16px;
         -webkit-font-smoothing: antialiased !important;
         height: 100vh;

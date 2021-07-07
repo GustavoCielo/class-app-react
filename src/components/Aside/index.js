@@ -13,6 +13,7 @@ import { BiBookReader } from "react-icons/bi";
 import { FaBookReader } from "react-icons/fa";
 import { useHistory } from "react-router";
 import { RiLogoutBoxRLine } from "react-icons/ri";
+import { FaGraduationCap } from "react-icons/fa";
 
 const Aside = () => {
   const [inHome, setInHome] = useState(true);
@@ -68,19 +69,19 @@ const Aside = () => {
           ></MdMessage>
         )}
         {inCourse ? (
-          <IoIosAlbums
+          <FaGraduationCap
             className="figure-aside"
             onClick={() => {
               sendTo();
             }}
-          ></IoIosAlbums>
+          ></FaGraduationCap>
         ) : (
-          <IoIosAlbums
+          <FaGraduationCap
             className="figure-aside"
             onClick={() => {
               sendTo();
             }}
-          ></IoIosAlbums>
+          ></FaGraduationCap>
         )}
         {inBooking ? (
           <BiBookReader
