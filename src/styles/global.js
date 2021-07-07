@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
+    #root {
+        height: 100vh;
+    }
+    
     :root {
        --primary-background: #ffffff,
        --secondary-background: #003F66,
@@ -18,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     body { 
         font-size: 16px;
         -webkit-font-smoothing: antialiased !important;
+        height: 100vh;
     }
 
     h1,h2,h3,h4,h5,h6 {
