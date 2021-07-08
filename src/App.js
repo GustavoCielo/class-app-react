@@ -1,11 +1,11 @@
-import SearchCourseItem from "./components/SeachCourseItem";
 import GlobalStyle from "./styles/global";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <SearchCourseItem />
+      <Header />
     </>
   );
 }
