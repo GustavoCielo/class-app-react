@@ -6,5 +6,5 @@ export const InputStyled = styled.input`
 
   border: none;
   background-color: transparent;
-  color: var(--color-theme);
+  color: #78848d;
 `;

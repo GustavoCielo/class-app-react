@@ -8,6 +8,9 @@ import {
   ContainerInputSingle,
   ContainerTextArea,
   ContainerSingleTextArea,
+  TextStyled,
+  RowCellInputDate,
+  RowButton,
 } from "./style";
 
 import { AiFillCloseCircle, AiFillInfoCircle } from "react-icons/ai";
@@ -17,6 +20,7 @@ import InputDate from "../InputDate";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
 import InputTextArea from "../InputTextArea";
+import Button from "../Button";
 
 const FormDocente = () => {
   return (
@@ -25,7 +29,7 @@ const FormDocente = () => {
         <form>
           <FormRow>
             <TextContainer>
-              <p>Cadastre-se como docente</p>
+              <h5>Cadastre-se como docente</h5>
               <AiFillCloseCircle />
             </TextContainer>
           </FormRow>
@@ -59,12 +63,12 @@ const FormDocente = () => {
           </FormRow>
 
           <FormRow>
-            <div>
+            <TextStyled>
               <p>Data de nascimento:</p>
-            </div>
-            <RowCell>
+            </TextStyled>
+            <RowCellInputDate>
               <InputDate />
-            </RowCell>
+            </RowCellInputDate>
           </FormRow>
 
           <FormRow>
@@ -102,6 +106,15 @@ const FormDocente = () => {
             </ContainerTextArea>
           </FormRow>
         </form>
+
+        <RowButton>
+          <Button colorBG={"var(--call-to-action)"}>Cadastrar</Button>
+          <div>
+            <p>
+              Já possui uma conta? <span>Clique aqui</span> para entrar.
+            </p>
+          </div>
+        </RowButton>
       </Container>
     </>
   );
