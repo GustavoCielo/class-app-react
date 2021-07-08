@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const ContainerInput = styled.div`
-  width: 150px;
+  width: 50%;
+  height: 35px;
   border-radius: 5px;
+  margin: 5px;
 
   border: 1px solid #d6d6ef;
   background-color: #f0f0fa;

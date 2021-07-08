@@ -1,11 +1,12 @@
 import GlobalStyle from "./styles/global";
-import Header from "./components/Header";
+
+import FormDocente from "./components/FormDocente";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <FormDocente />
     </>
   );
 }
