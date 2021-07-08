@@ -19,23 +19,32 @@ export const ContainerHeader = styled.header`
     align-items: center;
     height: 100%;
     width: 68%;
-    .search {
-      width: 30px;
-      height: 30px;
-    }
-
-    input {
+    .input {
       position: relative;
+      display: flex;
+      align-items: center;
       width: 302px;
       height: 40px;
-
       background: rgba(214, 214, 239, 0.25);
       border: 1px solid #d6d6ef;
       box-sizing: border-box;
       border-radius: 8px;
-    }
-    input::placeholder {
-      padding-left: 30px;
+      .search {
+        width: 20px;
+        height: 20px;
+        margin: -3px 0 0 12px;
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        margin-left: 12px;
+      }
+      input::placeholder {
+        font-size: 18px;
+      }
     }
   }
 
