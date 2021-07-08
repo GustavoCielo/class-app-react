@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const ContainerInput = styled.div`
   width: 200px;
   border-radius: 5px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #d6d6ef;
-  background-color: #f0f0fa;
+  background-color: var(--gray-background);
 
   textarea {
     width: 100%;
