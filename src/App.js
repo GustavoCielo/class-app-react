@@ -1,12 +1,11 @@
 import GlobalStyle from "./styles/global";
-
-import Button from "./components/button";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Button colorBG="red">Enviar</Button>
+      <Header />
     </>
   );
 }

@@ -9,12 +9,18 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-       
+       --primary-background: #ffffff;
+       --secondary-background: #003F66;
+       --orange-background: #F35D56;
+       --gray-background: #d6d6ef;
+       --primary-font: "Red Hat Display", sans-serif;
     }
 
-    body {
+    body { 
         font-size: 16px;
         -webkit-font-smoothing: antialiased !important;
+        height: 100vh;
+        font-family: var(--primary-font);
     }
 
     h1,h2,h3,h4,h5,h6 {
