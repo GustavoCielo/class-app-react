@@ -1,9 +1,9 @@
 import { InputStyled } from "./style";
 
-const InputDate = () => {
+const InputDate = ({ reference }) => {
   return (
     <>
-      <InputStyled type="date" />
+      <InputStyled type="date" name="data" {...reference} />
     </>
   );
 };

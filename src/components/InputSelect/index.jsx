@@ -1,9 +1,9 @@
 import { SelectStyled } from "./style";
 
-const InputSelect = ({ children }) => {
+const InputSelect = ({ children, reference }) => {
   return (
     <>
-      <SelectStyled>{children}</SelectStyled>
+      <SelectStyled {...reference}>{children}</SelectStyled>
     </>
   );
 };

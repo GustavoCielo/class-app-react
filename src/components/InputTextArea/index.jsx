@@ -1,9 +1,9 @@
 import { TextAreaStyled } from "./style";
 
-const InputTextArea = () => {
+const InputTextArea = ({ reference }) => {
   return (
     <>
-      <TextAreaStyled />
+      <TextAreaStyled {...reference} />
     </>
   );
 };

@@ -1,9 +1,9 @@
 import { InputStyled } from "./style";
 
-const Input = ({ placeholder, type }) => {
+const Input = ({ placeholder, type, reference }) => {
   return (
     <>
-      <InputStyled type={type} placeholder={placeholder} />
+      <InputStyled type={type} {...reference} placeholder={placeholder} />
     </>
   );
 };

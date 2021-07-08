@@ -94,7 +94,7 @@ export const TextStyled = styled.div`
 `;
 
 export const RowCellInputDate = styled.div`
-  width: 45%;
+  width: 60%;
   margin: 8px;
   background-color: #f0f0fa;
   border: 1px solid #78848d;
