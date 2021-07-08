@@ -9,12 +9,14 @@ const Header = () => {
     <ContainerHeader>
       
       <div className="inputContainer">
+        <div className="input">
         <span className="search">
-            <IconContext.Provider value={{size: "30px"}}>
+            <IconContext.Provider value={{size: "28px"}}>
               <BiSearch/>
             </IconContext.Provider>
           </span>
         <input type="text" placeholder="Search Groups"/>
+        </div>
       </div>
       <div className="profileContainer">
         <div className="icon">
