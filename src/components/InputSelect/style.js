@@ -1,23 +1,13 @@
 import styled from "styled-components";
 
-export const ContainerInput = styled.div`
+export const SelectStyled = styled.select`
   width: 100%;
+
   border-radius: 5px;
+  padding: 7px;
 
-  border: 1px solid #d6d6ef;
-  background-color: #f0f0fa;
-  margin: 5px;
+  background-color: transparent;
+  color: var(--color-theme);
 
-  select {
-    width: 100%;
-    padding: 8px;
-
-    border: none;
-    background-color: transparent;
-    color: #78848d;
-
-    option {
-      width: 100%;
-    }
-  }
+  border: none;
 `;

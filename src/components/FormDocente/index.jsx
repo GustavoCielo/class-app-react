@@ -1,12 +1,13 @@
 import {
-  ContainerForm,
+  Container,
+  TextContainer,
   FormRow,
-  LabelDataForm,
-  CellRowDate,
-  ContainerLabel,
-  Cell,
-  CellTextArea,
-  ContainerButton,
+  RowCell,
+  RowCellMerge,
+  ContainerSingle,
+  ContainerInputSingle,
+  ContainerTextArea,
+  ContainerSingleTextArea,
 } from "./style";
 
 import { AiFillCloseCircle, AiFillInfoCircle } from "react-icons/ai";
@@ -16,77 +17,92 @@ import InputDate from "../InputDate";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
 import InputTextArea from "../InputTextArea";
-import Button from "../Button";
 
 const FormDocente = () => {
   return (
     <>
-      <ContainerForm>
+      <Container>
         <form>
           <FormRow>
-            <p>Cadastre-se como docente</p>
-            <AiFillCloseCircle />
+            <TextContainer>
+              <p>Cadastre-se como docente</p>
+              <AiFillCloseCircle />
+            </TextContainer>
           </FormRow>
 
           <FormRow>
-            <Input type="text" placeholder="Nome" />
-            <Input type="text" placeholder="Sobrenome" />
+            <RowCell>
+              <Input type="text" placeholder="Nome" name="name" />
+            </RowCell>
+            <RowCell>
+              <Input type="text" placeholder="Sobrenome" name="surname" />
+            </RowCell>
           </FormRow>
 
           <FormRow>
-            <Input type="email" placeholder="Email" />
+            <RowCellMerge>
+              <Input type="email" placeholder="Email" name="email" />
+            </RowCellMerge>
           </FormRow>
 
           <FormRow>
-            <Input type="password" placeholder="Senha" />
-            <Input type="password" placeholder="Confirmar senha" />
+            <RowCell>
+              <Input type="password" placeholder="Senha" name="password" />
+            </RowCell>
+            <RowCell>
+              <Input
+                type="password"
+                placeholder="Confirmar senha"
+                name="confirmation"
+              />
+            </RowCell>
           </FormRow>
 
           <FormRow>
-            <CellRowDate>
-              <LabelDataForm>Data de nascimento:</LabelDataForm>
-            </CellRowDate>
-            <InputDate />
+            <div>
+              <p>Data de nascimento:</p>
+            </div>
+            <RowCell>
+              <InputDate />
+            </RowCell>
           </FormRow>
 
           <FormRow>
-            <Cell>
-              <ContainerLabel>
+            <ContainerSingle>
+              <TextContainer>
                 <p>Especialização</p>
                 <AiFillInfoCircle />
-              </ContainerLabel>
-              <Input type="text" />
-            </Cell>
-            <Cell>
-              <ContainerLabel>
+              </TextContainer>
+              <ContainerInputSingle>
+                <Input type="text" name="specialization" />
+              </ContainerInputSingle>
+            </ContainerSingle>
+
+            <ContainerSingle>
+              <TextContainer>
                 <p>Categoria</p>
-              </ContainerLabel>
-              <InputSelect>
-                <SelectOption></SelectOption>
-                <SelectOption>Humanas</SelectOption>
-                <SelectOption>Exatas</SelectOption>
-                <SelectOption>Biológicas</SelectOption>
-              </InputSelect>
-            </Cell>
+              </TextContainer>
+              <ContainerInputSingle>
+                <InputSelect name="category">
+                  <SelectOption></SelectOption>
+                  <SelectOption>Biológicas</SelectOption>
+                  <SelectOption>Exatas</SelectOption>
+                  <SelectOption>Humanas</SelectOption>
+                </InputSelect>
+              </ContainerInputSingle>
+            </ContainerSingle>
           </FormRow>
 
           <FormRow>
-            <CellTextArea>
-              <div>
-                <p>Conte mais sobre você...</p>
-              </div>
-              <InputTextArea />
-            </CellTextArea>
+            <ContainerTextArea>
+              <p>Conte mais sobre você...</p>
+              <ContainerSingleTextArea>
+                <InputTextArea name="description" />
+              </ContainerSingleTextArea>
+            </ContainerTextArea>
           </FormRow>
         </form>
-
-        <ContainerButton>
-          <Button colorBG="var(--call-to-action)">Cadastre-se</Button>
-          <p>
-            Já possui uma conta? <span>Clique aqui</span> para entrar.
-          </p>
-        </ContainerButton>
-      </ContainerForm>
+      </Container>
     </>
   );
 };

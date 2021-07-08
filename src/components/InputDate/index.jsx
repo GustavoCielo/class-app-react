@@ -1,10 +1,10 @@
-import { ContainerInput } from "./style";
+import { InputStyled } from "./style";
 
 const InputDate = () => {
   return (
-    <ContainerInput>
-      <input type="date" />
-    </ContainerInput>
+    <>
+      <InputStyled type="date" />
+    </>
   );
 };
 

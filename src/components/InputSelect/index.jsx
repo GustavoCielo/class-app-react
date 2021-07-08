@@ -1,10 +1,10 @@
-import { ContainerInput } from "./style";
+import { SelectStyled } from "./style";
 
 const InputSelect = ({ children }) => {
   return (
-    <ContainerInput>
-      <select>{children}</select>
-    </ContainerInput>
+    <>
+      <SelectStyled>{children}</SelectStyled>
+    </>
   );
 };
 
