@@ -1,9 +1,11 @@
 import { ButtonStyled } from "./style";
 
-const Button = ({ children, color }) => {
+const Button = ({ children, colorBG, color }) => {
   return (
     <>
-      <ButtonStyled color={color}>{children}</ButtonStyled>
+      <ButtonStyled colorBG={colorBG} color={color}>
+        {children}
+      </ButtonStyled>
     </>
   );
 };

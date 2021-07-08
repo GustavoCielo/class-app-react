@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Button>Enviar</Button>
+      <Button colorBG="red">Enviar</Button>
     </>
   );
 }
