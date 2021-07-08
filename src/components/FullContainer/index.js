@@ -1,7 +1,7 @@
 import { Container } from "./style";
 
-const FullContainer = () => {
-  return <Container></Container>;
+const FullContainer = ({ children }) => {
+  return <Container>{children}</Container>;
 };
 
 export default FullContainer;
