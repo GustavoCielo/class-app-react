@@ -21,7 +21,6 @@ const Aside = () => {
   const [inCourse, setInCourse] = useState(false);
   const [inBooking, setInBooking] = useState(false);
   const [inSettings, setInSettings] = useState(false);
-  const [isLogOut, setIsLogOut] = useState(false);
 
   const history = useHistory();
 
