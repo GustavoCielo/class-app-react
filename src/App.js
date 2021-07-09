@@ -1,12 +1,15 @@
 import GlobalStyle from "./styles/global";
-
-import FormLogin from "./components/FormLogin";
+import Header from "./components/Header";
+import ModalCreateCourse from "./components/ModalCreateCourse";
+import FormTeacher from "./components/FormTeacher";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <FormLogin />
+      <Header />
+      <FormTeacher />
+      <ModalCreateCourse />
     </>
   );
 }
