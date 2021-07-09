@@ -1,9 +1,11 @@
-import {ModalWalletContainer} from "./style"
+
+import bgImage from "../../assets/book (1) 1.png"
+import Modal from "../Modal"
 import Button from "../Button"
 
 const ModalWallet = () => {
   return(
-      <ModalWalletContainer>
+      <Modal backgroundImage={bgImage}>
         <header>
           <div>
           <h2>Saldo na conta</h2>
@@ -22,7 +24,7 @@ const ModalWallet = () => {
           <Button>Adicionar saldo</Button>
           <Button>Transferir</Button>
         </div>
-      </ModalWalletContainer>
+      </Modal>
   )
 
 }
