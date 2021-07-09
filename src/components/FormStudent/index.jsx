@@ -4,8 +4,6 @@ import {
   FormRow,
   RowCell,
   RowCellMerge,
-  ContainerSingle,
-  ContainerInputSingle,
   ContainerTextArea,
   ContainerSingleTextArea,
   TextStyled,
@@ -17,13 +15,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
-import { AiFillCloseCircle, AiFillInfoCircle } from "react-icons/ai";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 import Input from "../Input";
 import InputDate from "../InputDate";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
-import InputTextArea from "../InputTextArea";
 import Button from "../Button";
 
 const FormStudent = () => {
