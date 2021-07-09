@@ -1,10 +1,10 @@
-import { ContainerInput } from "./style";
+import { InputStyled } from "./style";
 
-const Input = ({ placeholder, type }) => {
+const Input = ({ placeholder, type, reference }) => {
   return (
-    <ContainerInput>
-      <input type={type} placeholder={placeholder} />
-    </ContainerInput>
+    <>
+      <InputStyled type={type} {...reference} placeholder={placeholder} />
+    </>
   );
 };
 
