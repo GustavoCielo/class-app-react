@@ -6,6 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 export const Container = styled.div`
   width: 90%;
+  max-width: 300px;
   padding: 10px 10px 5px 10px;
 
   margin: 0 auto;
@@ -101,6 +102,7 @@ export const ContainerInput = styled.div`
   width: 100%;
   height: 80px;
   max-height: 80px;
+  border-radius: 10px;
 
   background-color: var(--background-primary);
 `;
