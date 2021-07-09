@@ -1,10 +1,10 @@
-import { ContainerInput } from "./style";
+import { TextAreaStyled } from "./style";
 
-const InputTextArea = ({ children }) => {
+const InputTextArea = ({ reference }) => {
   return (
-    <ContainerInput>
-      <textarea />
-    </ContainerInput>
+    <>
+      <TextAreaStyled {...reference} />
+    </>
   );
 };
 
