@@ -1,34 +1,67 @@
 import {
   Container,
   ContainerRow,
+  RowCell,
   IconClose,
   IconMoney,
   IconClock,
   IconStar,
-  RowCell,
+  IconUser,
+  ContainerInput,
 } from "./style";
 
-const ModalPurchaseClass = () => {
+import InputTextArea from "../InputTextArea";
+import Button from "../Button";
+
+const ModalPurchaseClass = ({
+  title = "Titulo Teste",
+  value = "20.00",
+  qtdHours = 20,
+  rating = "4.0",
+  user = "Leonardo Junior",
+}) => {
   return (
     <>
       <Container>
         <ContainerRow>
-          <h3>Titulo</h3>
+          <h3>{title}</h3>
           <IconClose />
         </ContainerRow>
+
         <ContainerRow className="RowIcons">
           <RowCell>
             <IconMoney />
-            <p>70,00</p>
+            <p>{value}</p>
           </RowCell>
           <RowCell>
             <IconClock />
-            <p>20 horas</p>
+            {qtdHours > 1 ? <p>{qtdHours} horas</p> : <p>{qtdHours} hora</p>}
           </RowCell>
           <RowCell>
             <IconStar />
-            <p>5.0</p>
+            <p>{rating}</p>
           </RowCell>
+        </ContainerRow>
+
+        <ContainerRow className="RowProfile">
+          <RowCell>
+            <IconUser />
+          </RowCell>
+          <RowCell className="UserProfile">
+            <h3>{user}</h3>
+            <p>ver perfil</p>
+          </RowCell>
+        </ContainerRow>
+
+        <ContainerRow className="RowInputInfo">
+          <p>Descrição do curso:</p>
+          <ContainerInput>
+            <InputTextArea />
+          </ContainerInput>
+        </ContainerRow>
+
+        <ContainerRow className="RowButton">
+          <Button colorBG={"var(--color-theme)"}>Comprar</Button>
         </ContainerRow>
       </Container>
     </>
