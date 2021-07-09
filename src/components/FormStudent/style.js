@@ -76,8 +76,12 @@ export const ContainerTextArea = styled.div`
 `;
 
 export const ContainerSingleTextArea = styled.div`
-  width: 100%;
+  width: 98%;
   margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f0f0fa;
+  border: 1px solid #78848d;
 
   background-color: #f0f0fa;
 `;
@@ -104,8 +108,8 @@ export const RowCellInputDate = styled.div`
 
 export const RowButton = styled.div`
   width: 100%;
-  padding: 5px;
 
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
