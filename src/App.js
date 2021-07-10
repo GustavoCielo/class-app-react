@@ -1,11 +1,11 @@
 import GlobalStyle from "./styles/global";
-import RegisterDocente from "./pages/RegisterDocente";
+import RegisterStudent from "./pages/RegisterStudent";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <RegisterDocente />
+      <RegisterStudent />
     </>
   );
 }
