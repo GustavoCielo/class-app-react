@@ -7,7 +7,6 @@ import {
   SubContainer4,
   Title,
   IconContainer,
-  SelectContainer,
 } from "./styles";
 import Button from "../Button";
 import Input from "../Input";
