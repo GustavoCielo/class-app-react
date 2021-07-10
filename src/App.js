@@ -1,11 +1,11 @@
 import GlobalStyle from "./styles/global";
-import ModalPurchaseClass from "./components/ModalPurchaseClass";
+import RegisterDocente from "./pages/RegisterDocente";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <ModalPurchaseClass />
+      <RegisterDocente />
     </>
   );
 }

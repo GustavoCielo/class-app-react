@@ -1,10 +1,21 @@
 import styled from "styled-components";
 
+import { AiFillCloseCircle } from "react-icons/ai";
+
+export const IconClose = styled(AiFillCloseCircle)`
+  font-size: 30px;
+`;
+
 export const Container = styled.div`
   width: 90%;
   max-width: 400px;
+  min-width: 300px;
   padding: 10px;
 
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
   margin: 0 auto;
 `;
 
