@@ -2,7 +2,7 @@ import { Container, ContainerWaveRight, ContainerWaveLeft } from "./style";
 
 import FormTeacher from "../../components/FormTeacher";
 
-const RegisterDocente = () => {
+const RegisterTeacher = () => {
   return (
     <>
       <Container>
@@ -14,4 +14,4 @@ const RegisterDocente = () => {
   );
 };
 
-export default RegisterDocente;
+export default RegisterTeacher;
