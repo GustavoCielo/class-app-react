@@ -5,8 +5,10 @@ export const ButtonStyled = styled.button`
   padding: 4px;
   border-radius: 12px;
   margin-bottom: 5px;
+  height: ${({ height }) => height};
+  width: ${({ width }) => width};
 
-  font-size: 1rem;
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : "1rem")};
   font-weight: 500;
 
   background-color: ${({ colorBG }) => (colorBG ? colorBG : "transparent")};

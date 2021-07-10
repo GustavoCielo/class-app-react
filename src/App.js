@@ -8,9 +8,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <FormTeacher />
-      <ModalCreateCourse />
+      <ModalWallet />
     </>
   );
 }

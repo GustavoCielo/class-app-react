@@ -1,9 +1,10 @@
 import { ButtonStyled } from "./style";
 
-const Button = ({ children, colorBG, color }) => {
+const Button = ({ children, colorBG, color, height, width, fontSize, onclick}) => {
+  
   return (
     <>
-      <ButtonStyled colorBG={colorBG} color={color}>
+      <ButtonStyled onClick={onclick} colorBG={colorBG} color={color} height={height} width={width} fontSize={fontSize}>
         {children}
       </ButtonStyled>
     </>
