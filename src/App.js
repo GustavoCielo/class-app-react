@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ModalCreateCourse from "./components/ModalCreateCourse";
 import FormTeacher from "./components/FormTeacher";
 import ChatContainer from "./components/ChatContainer";
+import RegisterStudent from "./pages/RegisterStudent";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <FormTeacher />
       <ModalCreateCourse />
       <ChatContainer></ChatContainer>
+      <RegisterStudent />
     </>
   );
 }

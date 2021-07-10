@@ -22,7 +22,7 @@ const ChatContainer = ({ children, name }) => {
   // };
 
   return (
-    <Container>
+    <Container className="shadow">
       <SubContainer1>
         <Title>{name}</Title>
         <IoIosCloseCircle className="figure" />

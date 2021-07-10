@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 300px;
-  width: 300px;
+  height: 460px;
+  width: 460px;
   border: 1px solid #78848d;
   background-color: var(--background-secondary);
-  border-radius: 5px;
+  border-radius: 20px;
+
+  box-shadow: 0px 5px 5px 2px #ccc;
 `;
 
 export const SubContainer1 = styled.div`
@@ -20,6 +22,7 @@ export const SubContainer1 = styled.div`
     color: #78848d;
     width: 30px;
     height: 30px;
+    margin-right: 15px;
   }
 `;
 
@@ -35,6 +38,7 @@ export const SubContainer2 = styled.div`
 export const SubContainer21 = styled.div`
   background-color: #f0f0fa;
   width: 90%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -44,6 +48,9 @@ export const SubContainer21 = styled.div`
 
 export const SubContainer211 = styled.div`
   width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 export const InputChat = styled.input``;

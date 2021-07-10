@@ -11,6 +11,7 @@ import {
   TextStyled,
   RowCellInputDate,
   RowButton,
+  IconClose,
 } from "./style";
 
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -76,7 +77,7 @@ const FormTeacher = () => {
           <FormRow>
             <TextContainer>
               <h5>Cadastre-se como docente</h5>
-              <AiFillCloseCircle />
+              <IconClose />
             </TextContainer>
           </FormRow>
 

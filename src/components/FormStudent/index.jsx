@@ -9,13 +9,12 @@ import {
   TextStyled,
   RowCellInputDate,
   RowButton,
+  IconClose,
 } from "./style";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-
-import { AiFillCloseCircle } from "react-icons/ai";
 
 import Input from "../Input";
 import InputDate from "../InputDate";
@@ -65,7 +64,7 @@ const FormStudent = () => {
           <FormRow>
             <TextContainer>
               <h5>Cadastre-se como discente</h5>
-              <AiFillCloseCircle />
+              <IconClose />
             </TextContainer>
           </FormRow>
 
