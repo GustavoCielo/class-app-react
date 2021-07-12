@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container } from "./style";
 
 const ChatMessage = ({ children, idUser }) => {
   <Container>{children}</Container>;
