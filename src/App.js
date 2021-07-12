@@ -7,6 +7,7 @@ import RegisterStudent from "./pages/RegisterStudent";
 import PageLogin from "./pages/Login";
 import FullContainer from "./components/FullContainer";
 import ScrollBar from "./components/ScrollBar";
+import ModalEditCourse from "./components/ModalEditCourse";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <ModalCreateCourse />
         <ChatContainer></ChatContainer>
       </ScrollBar>
-
+      <ModalEditCourse />
       <RegisterStudent />
       <PageLogin />
       <FullContainer></FullContainer>

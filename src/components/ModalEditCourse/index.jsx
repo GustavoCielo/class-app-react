@@ -1,23 +1,25 @@
 import {
   Container,
+  Title,
   SubContainer1,
+  SubContainer11,
   SubContainer2,
+  SubContainer21,
+  SubContainer22,
   SubContainer3,
   SubContainer31,
-  SubContainer4,
-  Title,
-  IconContainer,
 } from "./style";
-import Button from "../Button";
-import Input from "../Input";
 import { IoIosCloseCircle } from "react-icons/io";
-import { useHistory } from "react-router-dom";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
-const ModalCreateCourse = () => {
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import Button from "../Button";
+import Input from "../Input";
+import { useHistory } from "react-router-dom";
+
+const ModalEditCourse = () => {
   const history = useHistory();
 
   const formSchemaCourse = yup.object().shape({
@@ -42,35 +44,41 @@ const ModalCreateCourse = () => {
   const onSubmitData = (data) => {
     console.log(data);
   };
-
   return (
     <Container onSubmit={handleSubmit(onSubmitData)}>
       <SubContainer1>
-        <Title>Crie seu curso</Title>
-        <IconContainer>
+        <Title>Editar informações do curso</Title>
+        <SubContainer11>
           <IoIosCloseCircle className="figure" />
-        </IconContainer>
+        </SubContainer11>
       </SubContainer1>
       <SubContainer2>
-        {errors.name && (
-          <span style={{ color: "red" }}>{errors.name?.message}</span>
-        )}
-        <Input placeholder="Nome" name="name" reference={register("name")} />
+        <SubContainer21>Nome</SubContainer21>
+        <SubContainer22>
+          <Input colorBG={"black"} inputSize={"14px"} />
+        </SubContainer22>
       </SubContainer2>
       <SubContainer2>
-        {errors.value && (
-          <span style={{ color: "red" }}>{errors.value?.message}</span>
-        )}
-        <Input placeholder="Valor" name="value" reference={register("value")} />
+        <SubContainer21>Valor</SubContainer21>
+        <SubContainer22>
+          <Input colorBG={"black"} inputSize={"14px"} />
+        </SubContainer22>
       </SubContainer2>
-      <SubContainer3>
-        <label>Categoria</label>
-        <SubContainer31>
-          {errors.description && (
-            <span style={{ color: "red" }}>{errors.description?.message}</span>
-          )}
-
-          <InputSelect name="category" reference={register("category")}>
+      <SubContainer2>
+        <SubContainer21>Duração</SubContainer21>
+        <SubContainer22>
+          <Input colorBG={"black"} inputSize={"14px"} />
+        </SubContainer22>
+      </SubContainer2>
+      <SubContainer2>
+        <SubContainer21>Categoria</SubContainer21>
+        <SubContainer22>
+          <InputSelect
+            name="description"
+            colorBG={"black"}
+            reference={register("category")}
+            inputSize={"14px"}
+          >
             <SelectOption value=""></SelectOption>
             <SelectOption value="Idiomas">Idiomas</SelectOption>
             <SelectOption value="Tecnologia">Tecnologia</SelectOption>
@@ -96,28 +104,28 @@ const ModalCreateCourse = () => {
             </SelectOption>
             <SelectOption value="Auto-ajuda">Auto-ajuda</SelectOption>
           </InputSelect>
-        </SubContainer31>
-      </SubContainer3>
+        </SubContainer22>
+      </SubContainer2>
+      <SubContainer2>
+        <SubContainer21>Link Reunião</SubContainer21>
+        <SubContainer22>
+          <Input colorBG={"black"} inputSize={"16px"} />
+        </SubContainer22>
+      </SubContainer2>
       <SubContainer3>
-        <label>Descrição</label>
         <SubContainer31>
-          {errors.category && (
-            <span style={{ color: "red" }}>{errors.category?.message}</span>
-          )}
-          <Input name="description" reference={register("description")} />
+          <Button
+            type="submit"
+            colorBG={"var(--color-theme)"}
+            inputSize={"14px"}
+            onclick={() => {}}
+          >
+            Salvar
+          </Button>
         </SubContainer31>
       </SubContainer3>
-      <SubContainer4>
-        <Button
-          type="submit"
-          colorBG={"var(--call-to-action)"}
-          onClick={() => {}}
-        >
-          Criar curso
-        </Button>
-      </SubContainer4>
     </Container>
   );
 };
 
-export default ModalCreateCourse;
+export default ModalEditCourse;
