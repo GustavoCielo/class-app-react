@@ -1,11 +1,11 @@
 import GlobalStyle from "./styles/global";
-import PageLogin from "./pages/Login";
+import ModalBuyCourse from "./components/ModalBuyCourse";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <PageLogin />
+      <ModalBuyCourse />
     </>
   );
 }
