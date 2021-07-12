@@ -47,7 +47,16 @@ export const SubContainer2 = styled.div`
   width: 90%;
 `;
 
-export const SubContainer21 = styled.div``;
+export const SubContainer21 = styled.div`
+  display: flex;
+  align-items: center;
+
+  .figure {
+    width: 17px;
+    height: 17px;
+    color: #78848d;
+  }
+`;
 
 export const SubContainer22 = styled.div`
   width: 60%;

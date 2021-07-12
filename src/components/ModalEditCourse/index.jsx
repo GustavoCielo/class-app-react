@@ -9,7 +9,7 @@ import {
   SubContainer3,
   SubContainer31,
 } from "./style";
-import { IoIosCloseCircle } from "react-icons/io";
+import { IoIosCloseCircle, IoIosInformationCircle } from "react-icons/io";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
 import * as yup from "yup";
@@ -107,7 +107,10 @@ const ModalEditCourse = () => {
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
-        <SubContainer21>Link Reunião</SubContainer21>
+        <SubContainer21>
+          Link Reunião
+          <IoIosInformationCircle className="figure" />
+        </SubContainer21>
         <SubContainer22>
           <Input colorBG={"black"} inputSize={"16px"} />
         </SubContainer22>
