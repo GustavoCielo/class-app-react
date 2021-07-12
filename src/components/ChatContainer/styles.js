@@ -7,7 +7,8 @@ export const Container = styled.div`
   background-color: var(--background-secondary);
   border-radius: 20px;
 
-  box-shadow: 0px 5px 5px 2px #ccc;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
 `;
 
 export const SubContainer1 = styled.div`

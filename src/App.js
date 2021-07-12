@@ -4,6 +4,7 @@ import ModalCreateCourse from "./components/ModalCreateCourse";
 import FormTeacher from "./components/FormTeacher";
 import ChatContainer from "./components/ChatContainer";
 import RegisterStudent from "./pages/RegisterStudent";
+import PageLogin from "./pages/Login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ModalCreateCourse />
       <ChatContainer></ChatContainer>
       <RegisterStudent />
+      <PageLogin />
     </>
   );
 }
