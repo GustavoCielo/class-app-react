@@ -7,6 +7,7 @@ import RegisterStudent from "./pages/RegisterStudent";
 import PageLogin from "./pages/Login";
 import FullContainer from "./components/FullContainer";
 import ScrollBar from "./components/ScrollBar";
+import CardAddWallet from "./components/CardAddWallet";
 
 function App() {
   return (
