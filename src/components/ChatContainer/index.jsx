@@ -10,17 +10,9 @@ import {
 import { IoIosCloseCircle } from "react-icons/io";
 import { MdSend } from "react-icons/md";
 
-import { useState } from "react";
 import InputChat from "../InputChat";
 
 const ChatContainer = ({ children, name }) => {
-  // const [chat, setChat] = useState("");
-  // const [message, setMessage] = useState([]);
-
-  // const handleChat = () => {
-  //   setMessage([...message, chat]);
-  // };
-
   return (
     <Container className="shadow">
       <SubContainer1>

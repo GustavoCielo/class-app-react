@@ -1,4 +1,4 @@
-import { Container } from "./style";
+import { Container } from "./styles";
 
 const FullContainer = ({ children }) => {
   return <Container>{children}</Container>;
