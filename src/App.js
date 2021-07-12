@@ -5,6 +5,8 @@ import FormTeacher from "./components/FormTeacher";
 import ChatContainer from "./components/ChatContainer";
 import RegisterStudent from "./pages/RegisterStudent";
 import PageLogin from "./pages/Login";
+import FullContainer from "./components/FullContainer";
+import ScrollBar from "./components/ScrollBar";
 
 function App() {
   return (
@@ -12,10 +14,14 @@ function App() {
       <GlobalStyle />
       <Header />
       <FormTeacher />
-      <ModalCreateCourse />
-      <ChatContainer></ChatContainer>
+      <ScrollBar>
+        <ModalCreateCourse />
+        <ChatContainer></ChatContainer>
+      </ScrollBar>
+
       <RegisterStudent />
       <PageLogin />
+      <FullContainer></FullContainer>
     </>
   );
 }
