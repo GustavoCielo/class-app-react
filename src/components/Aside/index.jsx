@@ -4,7 +4,7 @@ import {
   AsideMainContainerImage,
   AsideBottomContainerImage,
   AsideTopContainerImage,
-} from "./styles";
+} from "./style";
 import { AiOutlineHome, AiTwotoneHome } from "react-icons/ai";
 import { MdMessage } from "react-icons/md";
 import { BiMessageDetail } from "react-icons/bi";

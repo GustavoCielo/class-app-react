@@ -7,8 +7,7 @@ import {
   SubContainer4,
   Title,
   IconContainer,
-  SelectContainer,
-} from "./styles";
+} from "./style";
 import Button from "../Button";
 import Input from "../Input";
 import { IoIosCloseCircle } from "react-icons/io";
