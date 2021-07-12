@@ -6,7 +6,7 @@ import {
   SubContainer21,
   SubContainer211,
   ButtonChat,
-} from "./styles";
+} from "./style";
 import { IoIosCloseCircle } from "react-icons/io";
 import { MdSend } from "react-icons/md";
 

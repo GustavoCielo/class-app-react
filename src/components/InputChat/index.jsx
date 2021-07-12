@@ -1,4 +1,4 @@
-import { InputStyled } from "./styles";
+import { InputStyled } from "./style";
 
 const InputChat = ({ placeholder, type, reference }) => {
   return (
