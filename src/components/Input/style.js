@@ -6,8 +6,8 @@ export const InputStyled = styled.input`
   height: ${({ height }) => height};
   border-radius: 5px;
   background-color: transparent;
-
-  color: var(--color-theme);
+  font-size: ${({ inputSize }) => (inputSize ? inputSize : "12px")};
+  color: ${({ colorBG }) => (colorBG ? colorBG : "var(--color-theme)")};
   border: none;
 
   ::placeholder {
