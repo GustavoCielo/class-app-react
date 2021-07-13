@@ -7,7 +7,7 @@ export const SelectStyled = styled.select`
   padding: 7px;
 
   background-color: transparent;
-  color: var(--color-theme);
-
+  color: ${({ colorBG }) => (colorBG ? colorBG : "var(--color-theme)")};
+  font-size: ${({ inputSize }) => (inputSize ? inputSize : "12px")};
   border: none;
 `;

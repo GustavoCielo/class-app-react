@@ -7,7 +7,7 @@ import {
   SubContainer4,
   Title,
   IconContainer,
-} from "./styles";
+} from "./style";
 import Button from "../Button";
 import Input from "../Input";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -70,7 +70,7 @@ const ModalCreateCourse = () => {
             <span style={{ color: "red" }}>{errors.description?.message}</span>
           )}
 
-          <InputSelect name="description" reference={register("description")}>
+          <InputSelect name="category" reference={register("category")}>
             <SelectOption value=""></SelectOption>
             <SelectOption value="Idiomas">Idiomas</SelectOption>
             <SelectOption value="Tecnologia">Tecnologia</SelectOption>
@@ -104,7 +104,7 @@ const ModalCreateCourse = () => {
           {errors.category && (
             <span style={{ color: "red" }}>{errors.category?.message}</span>
           )}
-          <Input name="category" reference={register("category")} />
+          <Input name="description" reference={register("description")} />
         </SubContainer31>
       </SubContainer3>
       <SubContainer4>
