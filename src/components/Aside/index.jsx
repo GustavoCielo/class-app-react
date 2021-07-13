@@ -8,7 +8,7 @@ import {
 import { AiOutlineHome, AiTwotoneHome } from "react-icons/ai";
 import { MdMessage } from "react-icons/md";
 import { BiMessageDetail } from "react-icons/bi";
-import { IoIosAlbums, IoIosSettings, IoMdSettings } from "react-icons/io";
+import { IoIosSettings, IoMdSettings } from "react-icons/io";
 import { BiBookReader } from "react-icons/bi";
 import { FaBookReader } from "react-icons/fa";
 import { useHistory } from "react-router";
