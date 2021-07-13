@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const ContainerHeader = styled.header`
   position: relative;
   display: flex;
-  width: 779px;
+  width: 100%;
   height: 79px;
   top: 7px;
-  background: #f8f8fd;
   border-radius: 20px;
   //background color cinza só para ter uma visualização por enquanto
-  background-color: #dedede;
+  background-color: var(--background-secondary);
 
   .inputContainer {
     position: relative;
@@ -26,7 +25,7 @@ export const ContainerHeader = styled.header`
       width: 302px;
       height: 40px;
       background: rgba(214, 214, 239, 0.25);
-      border: 1px solid #d6d6ef;
+      border: 1px solid var(--hightlight-shadow);
       box-sizing: border-box;
       border-radius: 8px;
       .search {
@@ -64,7 +63,6 @@ export const ContainerHeader = styled.header`
 
   .name {
     p {
-      font-family: Red Hat Display;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
