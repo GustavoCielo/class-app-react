@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AsideContainer = styled.aside`
-  background-color: var(--secondary-background);
+  background-color: var(--color-theme);
   width: 100px;
   height: 98%;
   display: flex;
