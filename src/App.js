@@ -11,12 +11,6 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <ScrollBar></ScrollBar>
-      <ModalEditCourse />
-      <PageLogin />
-      <FullContainer></FullContainer>
-      <ModalEnterClass />
-      <Courses />
     </>
   );
 }
