@@ -1,30 +1,27 @@
-import { ContainerHeader } from "./style"
-import imgUser from "../../assets/icone usuario.png"
-import { BiWallet, BiSearch } from "react-icons/bi"
-import { IconContext } from "react-icons"
-
+import { ContainerHeader } from "./style";
+import imgUser from "../../assets/icone usuario.png";
+import { BiWallet, BiSearch } from "react-icons/bi";
+import { IconContext } from "react-icons";
 
 const Header = () => {
-  return(
+  return (
     <ContainerHeader>
-      
       <div className="inputContainer">
         <div className="input">
-        <span className="search">
-            <IconContext.Provider value={{size: "28px"}}>
-              <BiSearch/>
+          <span className="search">
+            <IconContext.Provider value={{ size: "28px" }}>
+              <BiSearch />
             </IconContext.Provider>
           </span>
-        <input type="text" placeholder="Search Groups"/>
+          <input type="text" placeholder="Procurar Curso" />
         </div>
       </div>
       <div className="profileContainer">
         <div className="icon">
           <span>
-            <IconContext.Provider value={{size: "30px"}}>
-            <BiWallet/>
+            <IconContext.Provider value={{ size: "30px" }}>
+              <BiWallet />
             </IconContext.Provider>
-            
           </span>
         </div>
         <div className="name">
@@ -35,8 +32,7 @@ const Header = () => {
         </div>
       </div>
     </ContainerHeader>
-  )
-}
+  );
+};
 
-
-export default Header
+export default Header;

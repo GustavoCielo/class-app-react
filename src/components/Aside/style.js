@@ -1,27 +1,55 @@
 import styled from "styled-components";
 
 export const AsideContainer = styled.aside`
+  margin: 7px;
   background-color: var(--color-theme);
-  width: 100px;
-  height: 98%;
+  width: 15%;
+  height: calc(100vh - 14px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  color: #020340;
 `;
 
 export const AsideMainContainerImage = styled.div`
   height: 60%;
   width: 100%;
-  justify-content: space-around;
-  align-items: center;
   display: flex;
+  justify-content: space-around;
+  align-items: baseline;
   flex-direction: column;
+  padding: 0 30px;
+  box-sizing: border-box;
 
   .figure-aside {
     width: 30px;
     height: 30px;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 0;
+    align-items: center;
+  }
+`;
+
+export const IconSelected = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const BallSelected = styled.div`
+  @media (max-width: 1300px) {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--call-to-action);
+    position: absolute;
+    bottom: -25px;
+    display: ${({ selected }) => !selected && "none"};
   }
 `;
 
@@ -34,6 +62,11 @@ export const AsideBottomContainerImage = styled.div`
   .figure-bottom {
     width: 30px;
     height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--background-secondary);
+    }
   }
 `;
 
@@ -46,5 +79,31 @@ export const AsideTopContainerImage = styled.div`
   .figure-top {
     width: 30px;
     height: 30px;
+  }
+`;
+
+export const Li = styled.li`
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  color: ${({ selected }) => selected && "var(--background-secondary)"};
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
+`;
+
+export const Text = styled.span`
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 1300px) {
+    display: none;
+    text-align: center;
   }
 `;
