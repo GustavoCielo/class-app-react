@@ -7,7 +7,9 @@ import Providers from "./providers";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Providers>
+        <App />
+      </Providers>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
