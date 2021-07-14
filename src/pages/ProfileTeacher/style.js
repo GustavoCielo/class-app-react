@@ -8,7 +8,9 @@ import ImageBackground from "../../assets/image-profile.svg";
 
 export const UserIcon = styled(FaUserCircle)`
   font-size: 5rem;
+  min-width: 60px;
   color: var(--color-theme);
+  margin-right: 10px;
 `;
 
 export const StarIcon = styled(AiFillStar)`
@@ -28,7 +30,7 @@ export const BulletIcon = styled(AiTwotoneInfoCircle)`
 
 export const MainStyled = styled.div`
   width: 95%;
-  height: 80%;
+  height: 70%;
   margin: 0 auto;
 
   display: grid;
@@ -109,7 +111,7 @@ export const MainStyled = styled.div`
 `;
 
 export const RowInformationsUser = styled.div`
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
