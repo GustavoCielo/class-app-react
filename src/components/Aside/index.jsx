@@ -1,27 +1,22 @@
-import { useState } from "react";
 import {
   AsideContainer,
   AsideMainContainerImage,
   AsideBottomContainerImage,
   AsideTopContainerImage,
+  IconSelected,
+  BallSelected,
+  Li,
+  Text,
 } from "./style";
-import { AiOutlineHome, AiTwotoneHome } from "react-icons/ai";
-import { MdMessage } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
 import { BiMessageDetail } from "react-icons/bi";
-import { IoIosSettings, IoMdSettings } from "react-icons/io";
+import { IoIosSettings } from "react-icons/io";
 import { BiBookReader } from "react-icons/bi";
-import { FaBookReader } from "react-icons/fa";
 import { useHistory } from "react-router";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { FaGraduationCap } from "react-icons/fa";
 
-const Aside = () => {
-  const [inHome, setInHome] = useState(true);
-  const [inMessage, setInMessage] = useState(false);
-  const [inCourse, setInCourse] = useState(false);
-  const [inBooking, setInBooking] = useState(false);
-  const [inSettings, setInSettings] = useState(false);
-
+const Aside = ({ page }) => {
   const history = useHistory();
 
   const sendTo = (path) => {
@@ -35,83 +30,68 @@ const Aside = () => {
         onClick={() => {
           sendTo();
         }}
-      ></AsideTopContainerImage>
+      />
       <AsideMainContainerImage>
-        {inHome ? (
-          <AiOutlineHome
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></AiOutlineHome>
-        ) : (
-          <AiTwotoneHome
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></AiTwotoneHome>
-        )}
-        {inMessage ? (
-          <BiMessageDetail
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></BiMessageDetail>
-        ) : (
-          <MdMessage
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></MdMessage>
-        )}
-        {inCourse ? (
-          <FaGraduationCap
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></FaGraduationCap>
-        ) : (
-          <FaGraduationCap
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></FaGraduationCap>
-        )}
-        {inBooking ? (
-          <BiBookReader
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></BiBookReader>
-        ) : (
-          <FaBookReader
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></FaBookReader>
-        )}
-        {inSettings ? (
-          <IoIosSettings
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></IoIosSettings>
-        ) : (
-          <IoMdSettings
-            className="figure-aside"
-            onClick={() => {
-              sendTo();
-            }}
-          ></IoMdSettings>
-        )}
+        <Li selected={page === "home"}>
+          <IconSelected>
+            <AiOutlineHome
+              className="figure-aside"
+              onClick={() => {
+                sendTo();
+              }}
+            />
+            <BallSelected selected={page === "home"} />
+          </IconSelected>
+          <Text>Home</Text>
+        </Li>
+        <Li selected={page === "message"}>
+          <IconSelected>
+            <BiMessageDetail
+              className="figure-aside"
+              onClick={() => {
+                sendTo();
+              }}
+            />
+            <BallSelected selected={page === "message"} />
+          </IconSelected>
+          <Text>Mensagens</Text>
+        </Li>
+        <Li selected={page === "courses"}>
+          <IconSelected>
+            <FaGraduationCap
+              className="figure-aside"
+              onClick={() => {
+                sendTo();
+              }}
+            />
+            <BallSelected selected={page === "courses"} />
+          </IconSelected>
+          <Text>Cursos</Text>
+        </Li>
+        <Li selected={page === "students"}>
+          <IconSelected>
+            <BiBookReader
+              className="figure-aside"
+              onClick={() => {
+                sendTo();
+              }}
+            />
+            <BallSelected selected={page === "students"} />
+          </IconSelected>
+          <Text>Alunos</Text>
+        </Li>
+        <Li selected={page === "settings"}>
+          <IconSelected>
+            <IoIosSettings
+              className="figure-aside"
+              onClick={() => {
+                sendTo();
+              }}
+            />
+            <BallSelected selected={page === "settings"} />
+          </IconSelected>
+          <Text>Configurações</Text>
+        </Li>
       </AsideMainContainerImage>
       <AsideBottomContainerImage>
         <RiLogoutBoxRLine
@@ -119,7 +99,7 @@ const Aside = () => {
           onClick={() => {
             sendTo();
           }}
-        ></RiLogoutBoxRLine>
+        />
       </AsideBottomContainerImage>
     </AsideContainer>
   );
