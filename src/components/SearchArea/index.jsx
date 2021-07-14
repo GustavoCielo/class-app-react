@@ -1,6 +1,9 @@
 import { DivHeader, ListContainer } from "./style";
+import { useCourses } from "../../providers/Courses";
+import star from "../../assets/star.svg";
 
 const SearchArea = () => {
+  const { courses } = useCourses();
   return (
     <>
       <DivHeader>
@@ -10,16 +13,25 @@ const SearchArea = () => {
         <div>VALOR</div>
         <div>AVALIAÇÃO</div>
       </DivHeader>
-      <div>
-        <ListContainer>
-          {/* aqui vai um map contendo as informações da API */}
-          <div>Design UX/UI</div>
-          <div>Design</div>
-          <div>30 horas</div>
-          <div>R$ 500,00</div>
-          <div>5.0</div>
-        </ListContainer>
-      </div>
+
+      {courses?.map((item, index) => {
+        return (
+          <ListContainer key={index}>
+            <div>
+              {item.name.length > 22
+                ? item.name.substring(0, 22) + "..."
+                : item.name}
+            </div>
+            <div>{item.category}</div>
+            <div>{item.totalHours}</div>
+            <div>R$ {item.price}</div>
+            <div>
+              <img src={star} alt="" />
+              {item.rating}
+            </div>
+          </ListContainer>
+        );
+      })}
     </>
   );
 };

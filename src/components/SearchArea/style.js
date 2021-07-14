@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const DivHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-gap: 20px;
   background-color: var(--color-theme);
   color: var(--background-primary);
   max-width: 680px;
@@ -13,9 +13,9 @@ export const DivHeader = styled.div`
 `;
 
 export const ListContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-gap: 20px;
   margin: 8px;
   background-color: var(--hightlight-shadow);
   height: 55px;
@@ -23,6 +23,13 @@ export const ListContainer = styled.div`
   font-size: 14px;
   color: #000000;
   max-width: 670px;
-  padding: 8px 56px 8px 8px;
+  padding: 8px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+  div {
+    max-width: 100px;
+  }
 `;
