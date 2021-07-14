@@ -1,0 +1,104 @@
+import styled from "styled-components";
+
+import { FaUserCircle } from "react-icons/fa";
+import { AiFillStar } from "react-icons/ai";
+import { FiArrowLeftCircle } from "react-icons/fi";
+
+export const UserIcon = styled(FaUserCircle)`
+  font-size: 5rem;
+  color: var(--color-theme);
+`;
+export const StarIcon = styled(AiFillStar)`
+  font-size: 2rem;
+  color: yellow;
+`;
+
+export const BackIcon = styled(FiArrowLeftCircle)`
+  font-size: 2.5rem;
+`;
+
+export const MainStyled = styled.div`
+  width: 95%;
+  height: 80%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, minmax(20vh, 1fr));
+  grid-gap: 10px;
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho"
+    "descricao descricao cursos"
+    "especializacao categoria cursos"
+    "imagem imagem cursos";
+
+  .estilo-geral {
+    background-color: #f8f8fd;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    padding: 10px;
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--color-theme);
+
+      margin-bottom: 10px;
+    }
+  }
+
+  .cabecalho {
+    grid-area: cabecalho;
+    background-color: #fdfdff;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .descricao {
+    grid-area: descricao;
+  }
+
+  .cursos {
+    grid-area: cursos;
+  }
+
+  .especializacao {
+    grid-area: especializacao;
+  }
+
+  .categoria {
+    grid-area: categoria;
+  }
+
+  .imagem {
+    grid-area: imagem;
+  }
+`;
+
+export const RowInformationsUser = styled.div`
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const CellRating = styled.div`
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+`;
+
+export const RowController = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SectionStyled = styled.div``;
