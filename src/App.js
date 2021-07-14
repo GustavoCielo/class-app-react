@@ -1,12 +1,11 @@
 import GlobalStyle from "./styles/global";
-
-import ProfileTeacher from "./pages/ProfileTeacher";
+import Routes from "./routes";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <ProfileTeacher />
+      <Routes />
     </>
   );
 }
