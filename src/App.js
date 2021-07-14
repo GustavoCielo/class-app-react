@@ -1,13 +1,11 @@
 import GlobalStyle from "./styles/global";
-/* import Routes from "./routes"; */
-import PageStudents from "./pages/Students";
+import Routes from "./routes";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      {/* <Routes /> */}
-      <PageStudents />
+      <Routes />
     </>
   );
 }
