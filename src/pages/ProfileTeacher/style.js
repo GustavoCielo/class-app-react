@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 import { FaUserCircle } from "react-icons/fa";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiTwotoneInfoCircle } from "react-icons/ai";
 import { FiArrowLeftCircle } from "react-icons/fi";
+
+import ImageBackground from "../../assets/image-profile.svg";
 
 export const UserIcon = styled(FaUserCircle)`
   font-size: 5rem;
   color: var(--color-theme);
 `;
+
 export const StarIcon = styled(AiFillStar)`
   font-size: 2rem;
   color: yellow;
@@ -15,6 +18,12 @@ export const StarIcon = styled(AiFillStar)`
 
 export const BackIcon = styled(FiArrowLeftCircle)`
   font-size: 2.5rem;
+`;
+
+export const BulletIcon = styled(AiTwotoneInfoCircle)`
+  color: red;
+  background-color: red;
+  border-radius: 50%;
 `;
 
 export const MainStyled = styled.div`
@@ -62,6 +71,24 @@ export const MainStyled = styled.div`
 
   .cursos {
     grid-area: cursos;
+
+    ul {
+      padding: 10px;
+
+      li {
+        list-style: none;
+        padding: 10px;
+
+        display: flex;
+
+        span {
+          display: flex;
+          align-items: center;
+
+          margin-right: 5px;
+        }
+      }
+    }
   }
 
   .especializacao {
@@ -74,6 +101,10 @@ export const MainStyled = styled.div`
 
   .imagem {
     grid-area: imagem;
+    background-image: url(${ImageBackground});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 `;
 

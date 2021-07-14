@@ -2,6 +2,7 @@ import {
   UserIcon,
   StarIcon,
   BackIcon,
+  BulletIcon,
   MainStyled,
   RowInformationsUser,
   CellRating,
@@ -39,6 +40,26 @@ const ProfileTeacher = () => {
           </div>
           <div className="cursos estilo-geral">
             <p className="title">Cursos</p>
+            <ul>
+              <li>
+                <span>
+                  <BulletIcon />
+                </span>
+                <p>Algebra Linear</p>
+              </li>
+              <li>
+                <span>
+                  <BulletIcon />
+                </span>
+                Estatística
+              </li>
+              <li>
+                <span>
+                  <BulletIcon />
+                </span>
+                Calculo I
+              </li>
+            </ul>
           </div>
           <div className="especializacao estilo-geral">
             <p className="title">Especialização</p>
@@ -48,7 +69,7 @@ const ProfileTeacher = () => {
             <p className="title">Categoria</p>
             <p>Exatas</p>
           </div>
-          <div className="imagem">Imagem</div>
+          <div className="imagem"></div>
         </MainStyled>
       </HeaderAndAside>
     </>
