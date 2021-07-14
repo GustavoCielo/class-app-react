@@ -15,6 +15,14 @@ export const Image = styled.div`
   &:hover {
     filter: grayscale(0);
   }
+
+  @media (max-width: 749px) {
+    right: ${({ student }) => (student ? "0" : "-50px")};
+  }
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 export const TextTop = styled.div`
@@ -64,5 +72,14 @@ export const Container = styled.div`
 
   &:hover ${TextBottom} {
     height: 0;
+  }
+
+  @media (max-width: 749px) {
+    height: 300px;
+  }
+
+  @media (max-width: 425px) {
+    width: 270px;
+    height: 120px;
   }
 `;
