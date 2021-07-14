@@ -6,6 +6,6 @@ export const DivStyled = styled.div`
   border-radius: 5px;
   padding: 16px;
 
-  width: ${(props) => width};
-  height: ${(props) => height};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
 `;
