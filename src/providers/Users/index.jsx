@@ -5,7 +5,7 @@ import jwt_decode from "jwt-decode";
 export const UsersContext = createContext();
 
 export const UsersProvider = ({ children }) => {
-  const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
+  /*   const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
   const [user, setUser] = useState([]);
 
   const handleUser = (token) => {
@@ -25,9 +25,17 @@ export const UsersProvider = ({ children }) => {
   useEffect(() => {
     handleUser(token);
   }, [user]);
-
+ */
   return (
-    <UsersContext.Provider value={{ user }}>{children}</UsersContext.Provider>
+    <UsersContext.Provider
+      value={
+        {
+          /* user */
+        }
+      }
+    >
+      {children}
+    </UsersContext.Provider>
   );
 };
 

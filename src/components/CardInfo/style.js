@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const CardInfoContainer = styled.div`
-  width: 302px;
+  width: 95%;
+  max-width: 302px;
   height: 150px;
   background: #d6d6ef;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  margin: 15px auto;
 
   .student {
     height: 70%;
@@ -43,8 +45,8 @@ export const CardInfoContainer = styled.div`
       border-radius: 20px;
       font-size: 14px;
       line-height: 19px;
-      color: var(--primary-background);
-      background: var(--secondary-background);
+      color: var(--background-primary);
+      background: var(--color-theme);
     }
   }
 `;
