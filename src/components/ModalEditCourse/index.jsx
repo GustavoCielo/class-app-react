@@ -27,12 +27,13 @@ const ModalEditCourse = () => {
       .string()
       .required("Campo Obrigatório")
       .max(20, "Máximo de 20 caracteres"),
-    value: yup
+    price: yup
       .string()
       .required("Campo Obrigatório")
       .max(5, "Máximo de 7 caracteres"),
+    hours: yup.string().required("Campo Obrigatório"),
     category: yup.string().required("Campo Obrigatório"),
-    description: yup.string().required("Campo Obrigatório"),
+    link: yup.string().required("Campo obrigatório"),
   });
 
   const {
@@ -55,27 +56,42 @@ const ModalEditCourse = () => {
       <SubContainer2>
         <SubContainer21>Nome</SubContainer21>
         <SubContainer22>
-          <Input colorBG={"black"} inputSize={"14px"} />
+          <Input
+            colorBG={"black"}
+            inputSize={"14px"}
+            name="name"
+            reference={register("name")}
+          />
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
         <SubContainer21>Valor</SubContainer21>
         <SubContainer22>
-          <Input colorBG={"black"} inputSize={"14px"} />
+          <Input
+            colorBG={"black"}
+            inputSize={"14px"}
+            name="price"
+            reference={register("price")}
+          />
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
         <SubContainer21>Duração</SubContainer21>
         <SubContainer22>
-          <Input colorBG={"black"} inputSize={"14px"} />
+          <Input
+            colorBG={"black"}
+            inputSize={"14px"}
+            name="hours"
+            reference={register("hours")}
+          />
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
         <SubContainer21>Categoria</SubContainer21>
         <SubContainer22>
           <InputSelect
-            name="description"
             colorBG={"black"}
+            name="category"
             reference={register("category")}
             inputSize={"14px"}
           >
@@ -112,7 +128,12 @@ const ModalEditCourse = () => {
           <IoIosInformationCircle className="figure" />
         </SubContainer21>
         <SubContainer22>
-          <Input colorBG={"black"} inputSize={"16px"} />
+          <Input
+            colorBG={"black"}
+            inputSize={"16px"}
+            name="link"
+            reference={register("link")}
+          />
         </SubContainer22>
       </SubContainer2>
       <SubContainer3>
