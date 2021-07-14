@@ -12,7 +12,7 @@ export const AuthenticateProvider = ({ children }) => {
   };
 
   return (
-    <AuthenticateContext.Provider value={{ isLoged }}>
+    <AuthenticateContext.Provider value={{ isLoged}}>
       {children}
     </AuthenticateContext.Provider>
   );
