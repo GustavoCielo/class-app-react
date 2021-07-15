@@ -17,6 +17,8 @@ import { useCourses } from "../../providers/Courses";
 import { useHistory, Redirect } from "react-router-dom";
 import { useAuth } from "../../providers/Authentication";
 
+import { motion } from "framer-motion";
+
 const ProfileTeacher = () => {
   const { user } = useUsers();
   const { courses } = useCourses();
@@ -34,7 +36,12 @@ const ProfileTeacher = () => {
   });
 
   return (
-    <>
+    <motion.div
+      initial={{ x: -2000, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 2000, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <HeaderAndAside>
         <MainStyled>
           <div className="cabecalho">
@@ -86,7 +93,7 @@ const ProfileTeacher = () => {
           <div className="imagem"></div>
         </MainStyled>
       </HeaderAndAside>
-    </>
+    </motion.div>
   );
 };
 

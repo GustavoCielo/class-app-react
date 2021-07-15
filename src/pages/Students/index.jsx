@@ -9,6 +9,8 @@ import LottieAnimation from "../../lottie";
 import { useHistory, Redirect } from "react-router-dom";
 import { useAuth } from "../../providers/Authentication";
 
+import { motion } from "framer-motion";
+
 const PageStudents = ({
   qtdDiscents = 0,
   students = [
@@ -30,7 +32,12 @@ const PageStudents = ({
 
   return (
     //Falta chamar os dados do context
-    <>
+    <motion.div
+      initial={{ x: -2000, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 2000, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <HeadAndAside>
         <MainStyled>
           <div className="titulo">
@@ -58,7 +65,7 @@ const PageStudents = ({
           </div>
         </MainStyled>
       </HeadAndAside>
-    </>
+    </motion.div>
   );
 };
 
