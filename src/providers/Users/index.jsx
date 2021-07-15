@@ -5,10 +5,10 @@ import jwt_decode from "jwt-decode";
 export const UsersContext = createContext();
 
 export const UsersProvider = ({ children }) => {
-  const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
   const [user, setUser] = useState([]);
 
-  const handleUser = (token) => {
+  const handleUser = () => {
+    const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
     const decoded = jwt_decode(token);
     const id = decoded.sub;
 
@@ -22,14 +22,11 @@ export const UsersProvider = ({ children }) => {
       .catch((err) => console.log(err));
   };
 
-  useEffect(() => {
-    handleUser(token);
-  }, [user]);
-
   return (
     <UsersContext.Provider
       value={{
         user,
+        handleUser,
       }}
     >
       {children}
