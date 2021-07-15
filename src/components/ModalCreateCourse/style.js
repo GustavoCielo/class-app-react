@@ -9,6 +9,7 @@ export const Container = styled.form`
   align-items: center;
   border: 1px solid #78848d;
   border-radius: 5px;
+  background-color: var(--background-secondary);
 `;
 
 export const SubContainer1 = styled.div`
@@ -23,6 +24,7 @@ export const Title = styled.h3`
 `;
 
 export const IconContainer = styled.div`
+  cursor: pointer;
   .figure {
     width: 25px;
     height: 25px;

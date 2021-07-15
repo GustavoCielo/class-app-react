@@ -9,7 +9,6 @@ import {
   SubContainer3,
   SubContainer31,
 } from "./style";
-import { IoIosCloseCircle, IoIosInformationCircle } from "react-icons/io";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
 import * as yup from "yup";
@@ -18,8 +17,16 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Button from "../Button";
 import Input from "../Input";
 import { useHistory } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import api from "../../services/api"
 
-const ModalEditCourse = () => {
+const EditInformation = () => {
+  
+
+
+
+
+
   const history = useHistory();
 
   const formSchemaCourse = yup.object().shape({
@@ -27,13 +34,13 @@ const ModalEditCourse = () => {
       .string()
       .required("Campo Obrigatório")
       .max(20, "Máximo de 20 caracteres"),
-    price: yup
+    email: yup
       .string()
-      .required("Campo Obrigatório")
-      .max(5, "Máximo de 7 caracteres"),
-    hours: yup.string().required("Campo Obrigatório"),
+      .email("Insira um email válido")
+      .required("Campo Obrigatório"),
     category: yup.string().required("Campo Obrigatório"),
-    link: yup.string().required("Campo obrigatório"),
+    specialization: yup.string().required("Campo Obrigatório"),
+    description: yup.string().required("Campo Obrigatório")
   });
 
   const {
@@ -43,58 +50,60 @@ const ModalEditCourse = () => {
   } = useForm({ resolver: yupResolver(formSchemaCourse) });
 
   const onSubmitData = (data) => {
-    console.log(data);
+    
+      const token = JSON.parse(localStorage.getItem("@ClassApp:token"));
+    
+      const decoded = jwt_decode(token)
+      const userId = decoded.sub
+      api.patch(`/users/${userId}/`,data, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+          //mensagem de exito
+        })
+        .catch((err) => console.log(err));
+    
   };
+
+  
   return (
     <Container onSubmit={handleSubmit(onSubmitData)}>
+      
       <SubContainer1>
-        <Title>Editar informações do curso</Title>
-        <SubContainer11>
-          <IoIosCloseCircle className="figure" />
-        </SubContainer11>
+        <Title>Informações gerais</Title>
+        
       </SubContainer1>
       <SubContainer2>
         <SubContainer21>Nome</SubContainer21>
         <SubContainer22>
-          <Input
-            colorBG={"black"}
-            inputSize={"14px"}
-            name="name"
-            reference={register("name")}
-          />
+         
+          <Input colorBG={"black"} inputSize={"14px"} reference={register("name")} name="name"/>
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
-        <SubContainer21>Valor</SubContainer21>
+        <SubContainer21>Email</SubContainer21>
         <SubContainer22>
-          <Input
-            colorBG={"black"}
-            inputSize={"14px"}
-            name="price"
-            reference={register("price")}
-          />
+          <Input colorBG={"black"} inputSize={"14px"} reference={register("email")} name="email"/>
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
-        <SubContainer21>Duração</SubContainer21>
+        <SubContainer21>Especialização</SubContainer21>
         <SubContainer22>
-          <Input
-            colorBG={"black"}
-            inputSize={"14px"}
-            name="hours"
-            reference={register("hours")}
-          />
+          <Input colorBG={"black"} inputSize={"14px"} reference={register("specialization")} name="specialization"/>
         </SubContainer22>
       </SubContainer2>
       <SubContainer2>
         <SubContainer21>Categoria</SubContainer21>
         <SubContainer22>
           <InputSelect
-            colorBG={"black"}
             name="category"
+            colorBG={"black"}
             reference={register("category")}
-            inputSize={"14px"}
-          >
+            inputSize={"14px"}>
+
             <SelectOption value=""></SelectOption>
             <SelectOption value="Idiomas">Idiomas</SelectOption>
             <SelectOption value="Tecnologia">Tecnologia</SelectOption>
@@ -122,28 +131,21 @@ const ModalEditCourse = () => {
           </InputSelect>
         </SubContainer22>
       </SubContainer2>
+      
       <SubContainer2>
-        <SubContainer21>
-          Link Reunião
-          <IoIosInformationCircle className="figure" />
-        </SubContainer21>
+        <SubContainer21>Descrição</SubContainer21>
         <SubContainer22>
-          <Input
-            colorBG={"black"}
-            inputSize={"16px"}
-            name="link"
-            reference={register("link")}
-          />
+          <Input colorBG={"black"} inputSize={"14px"} reference={register("description")} name="description"/>
         </SubContainer22>
       </SubContainer2>
       <SubContainer3>
         <SubContainer31>
+          
           <Button
             type="submit"
             colorBG={"var(--color-theme)"}
             inputSize={"14px"}
             onclick={() => {}}
-          
           >
             Enviar alterações
           </Button>
@@ -153,4 +155,4 @@ const ModalEditCourse = () => {
   );
 };
 
-export default ModalEditCourse;
+export default EditInformation;
