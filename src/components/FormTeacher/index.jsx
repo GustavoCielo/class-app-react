@@ -28,7 +28,7 @@ import InputTextArea from "../InputTextArea";
 import Button from "../Button";
 
 import { useAuth } from "../../providers/Authentication";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const FormTeacher = () => {
   const history = useHistory();
@@ -82,7 +82,9 @@ const FormTeacher = () => {
           <FormRow>
             <TextContainer>
               <h5>Cadastre-se como docente</h5>
-              <IconClose />
+              <Link to="/register" style={{ color: "black" }}>
+                <IconClose />
+              </Link>
             </TextContainer>
           </FormRow>
 
@@ -218,7 +220,13 @@ const FormTeacher = () => {
             </Button>
             <div>
               <p>
-                Já possui uma conta? <span>Clique aqui</span> para entrar.
+                Já possui uma conta?{" "}
+                <span>
+                  <Link to="/login" style={{ color: "black" }}>
+                    Clique aqui
+                  </Link>
+                </span>{" "}
+                para entrar.
               </p>
             </div>
           </RowButton>
