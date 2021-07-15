@@ -6,6 +6,7 @@ import LottieAnimation from "../../lottie";
 
 import { useHistory, Redirect } from "react-router-dom";
 import { useAuth } from "../../providers/Authentication";
+import { motion } from "framer-motion";
 
 const PageLogin = () => {
   const history = useHistory();
@@ -17,7 +18,12 @@ const PageLogin = () => {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ x: -2000, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 2000, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Container>
         <div className="wave" />
         <div className="form">
@@ -32,7 +38,7 @@ const PageLogin = () => {
         </div>
         <div className="wave2" />
       </Container>
-    </>
+    </motion.div>
   );
 };
 
