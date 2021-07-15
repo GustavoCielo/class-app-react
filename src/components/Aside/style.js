@@ -11,6 +11,12 @@ export const AsideContainer = styled.aside`
   align-items: center;
   border-radius: 20px;
   color: #020340;
+  @media (min-width: 320px) and (max-width: 768px) {
+    height: 15%;
+    width: 100%;
+    padding: 8px 0;
+    flex-direction: row;
+  }
 `;
 
 export const AsideMainContainerImage = styled.div`
@@ -31,6 +37,10 @@ export const AsideMainContainerImage = styled.div`
   @media (max-width: 1300px) {
     padding: 0;
     align-items: center;
+  }
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    flex-direction: row;
   }
 `;
 
@@ -93,6 +103,9 @@ export const Li = styled.li`
   color: ${({ selected }) => selected && "var(--background-secondary)"};
   @media (max-width: 1300px) {
     justify-content: center;
+  }
+  @media (min-width: 320px) and (max-width: 768px) {
+    margin: 0 8px;
   }
 `;
 
