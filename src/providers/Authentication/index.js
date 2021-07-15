@@ -15,16 +15,19 @@ export const AuthenticateProvider = ({ children }) => {
   const login = (data, history) => {
     api
       .post("/users", data)
-      .then((response) => {
+      .then((res) => {
         localStorage.removeItem("@ClassApp:token");
         localStorage.setItem(
           "@ClassApp:token",
-          JSON.stringify(response.data.accessToken)
+          JSON.stringify(res.data.accessToken)
         );
         isLoged();
-        history.push("/");
+        history.push("/dashboard");
       })
-      .catch((error) => console.log("Usuário ou senha inválidos."));
+      .catch((err) => {
+        alert(err);
+        console.log("Usuário ou senha inválidos.");
+      });
   };
 
   const singUp = (data, history) => {

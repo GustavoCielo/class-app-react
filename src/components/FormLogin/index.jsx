@@ -36,6 +36,7 @@ const FormLogin = () => {
 
   const handleSubmitForm = (data) => {
     login(data, history);
+    /* console.log(data); */
   };
 
   return (
