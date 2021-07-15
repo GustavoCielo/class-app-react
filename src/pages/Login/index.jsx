@@ -1,11 +1,4 @@
-import {
-  Container,
-  Wave1,
-  Wave2,
-  ContainerCentral,
-  ContainerAnimation,
-  ContainerForm,
-} from "./style";
+import { Container } from "./style";
 
 import FormLogin from "../../components/FormLogin";
 import SecureLogin from "../../animations/SecureLogin/secure-login.json";
@@ -26,20 +19,18 @@ const PageLogin = () => {
   return (
     <>
       <Container>
-        <Wave1 />
-        <ContainerCentral>
-          <ContainerForm>
-            <FormLogin />
-          </ContainerForm>
-          <ContainerAnimation>
-            <LottieAnimation
-              lotti={SecureLogin}
-              width={"100%"}
-              height={"100%"}
-            />
-          </ContainerAnimation>
-        </ContainerCentral>
-        <Wave2 />
+        <div className="wave" />
+        <div className="form">
+          <FormLogin />
+        </div>
+        <div className="animation">
+          <LottieAnimation
+            lotti={SecureLogin}
+            width={"300px"}
+            height={"300px"}
+          />
+        </div>
+        <div className="wave2" />
       </Container>
     </>
   );

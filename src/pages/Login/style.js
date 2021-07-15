@@ -5,53 +5,42 @@ import WaveRight from "../../assets/wave-right.svg";
 import ImageLogin from "../../assets/figurelogin.svg";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-`;
-
-export const Wave1 = styled.div`
-  width: 20%;
-
-  background-image: url(${WaveLeft});
-
-  @media (max-width: 767px) {
-    display: none;
-  }
-`;
-
-export const ContainerCentral = styled.div`
-  width: 60%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  @media (max-width: 767px) {
-    width: 100%;
-  }
-`;
-
-export const ContainerForm = styled.div`
   width: 100%;
+  height: 100%;
 
-  display: flex;
-  justify-content: center;
-`;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: repeat(2, minmax(50vh, 2fr));
+  grid-template-areas:
+    "wave form wave2"
+    "wave animation wave2";
 
-export const ContainerAnimation = styled.div`
-  width: 50%;
-  justify-self: flex-end;
-`;
+  .wave {
+    grid-area: wave;
+    background-image: url(${WaveLeft});
 
-export const Wave2 = styled.div`
-  width: 20%;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 
-  background-image: url(${WaveRight});
+  .form {
+    grid-area: form;
 
-  @media (max-width: 767px) {
-    display: none;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .animation {
+    grid-area: animation;
+  }
+
+  .wave2 {
+    grid-area: wave2;
+    background-image: url(${WaveRight});
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 `;
