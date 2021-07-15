@@ -10,8 +10,8 @@ const RegisterTeacher = () => {
 
   const { isLoged } = useAuth();
 
-  if (!isLoged) {
-    return <Redirect to="/" />;
+  if (isLoged() === true) {
+    return <Redirect to="/dashboard" />;
   }
 
   return (

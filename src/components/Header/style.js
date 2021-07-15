@@ -10,6 +10,12 @@ export const ContainerHeader = styled.header`
   //background color cinza só para ter uma visualização por enquanto
   background-color: var(--background-secondary);
 
+  @media only screen and (max-width: 360px) {
+    .inputContainer {
+      display: none;
+    }
+  }
+
   .inputContainer {
     position: relative;
     padding-left: 30px;

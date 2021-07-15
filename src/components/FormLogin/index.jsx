@@ -14,7 +14,7 @@ import Input from "../Input";
 import Button from "../Button";
 
 import { useAuth } from "../../providers/Authentication";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const FormLogin = () => {
   const history = useHistory();
@@ -36,6 +36,7 @@ const FormLogin = () => {
 
   const handleSubmitForm = (data) => {
     login(data, history);
+    /* console.log(data); */
   };
 
   return (
@@ -80,7 +81,12 @@ const FormLogin = () => {
             </Button>
             <div>
               <p>
-                Não possui uma conta? <span>Inscreva-se!</span>
+                Não possui uma conta?{" "}
+                <span>
+                  <Link to="/register" style={{ color: "black" }}>
+                    Inscreva-se!
+                  </Link>
+                </span>
               </p>
             </div>
           </RowButton>
