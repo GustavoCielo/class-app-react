@@ -1,13 +1,15 @@
 import {
   Container,
-  ContainerWaveRight,
-  ContainerWaveLeft,
-  ContainerForm,
-  ContainerImageLogin,
+  Wave1,
+  Wave2,
   ContainerCentral,
+  ContainerAnimation,
+  ContainerForm,
 } from "./style";
 
 import FormLogin from "../../components/FormLogin";
+import SecureLogin from "../../animations/SecureLogin/secure-login.json";
+import LottieAnimation from "../../lottie";
 
 import { useHistory, Redirect } from "react-router-dom";
 import { useAuth } from "../../providers/Authentication";
@@ -24,14 +26,20 @@ const PageLogin = () => {
   return (
     <>
       <Container>
-        <ContainerWaveLeft />
+        <Wave1 />
         <ContainerCentral>
           <ContainerForm>
             <FormLogin />
           </ContainerForm>
-          <ContainerImageLogin />
+          <ContainerAnimation>
+            <LottieAnimation
+              lotti={SecureLogin}
+              width={"100%"}
+              height={"100%"}
+            />
+          </ContainerAnimation>
         </ContainerCentral>
-        <ContainerWaveRight />
+        <Wave2 />
       </Container>
     </>
   );

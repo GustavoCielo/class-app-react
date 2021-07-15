@@ -25,7 +25,7 @@ export const AuthenticateProvider = ({ children }) => {
         history.push("/dashboard");
       })
       .catch((err) => {
-        alert(err);
+        alert("Usuário ou senha inválidos.");
         console.log("Usuário ou senha inválidos.");
       });
   };
@@ -37,7 +37,7 @@ export const AuthenticateProvider = ({ children }) => {
         console.log("Sucesso ao criar a conta! Faça seu login :D");
         history.push("/login");
       })
-      .catch((error) => console.log("Usuário já existe."));
+      .catch((error) => alert("Usuário já existe."));
   };
 
   return (

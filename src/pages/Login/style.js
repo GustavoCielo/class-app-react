@@ -9,59 +9,47 @@ export const Container = styled.div`
   height: 100vh;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
-export const ContainerForm = styled.div`
-  margin: 0 auto;
-`;
+export const Wave1 = styled.div`
+  width: 20%;
 
-export const ContainerCentral = styled.div`
-  height: 100%;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ContainerWaveLeft = styled.div`
-  width: 200px;
-  height: 100vh;
-  position: absolute;
-  z-index: -1;
-
-  background: url(${WaveLeft}) no-repeat center;
-  background-size: cover;
-  background-position: center;
-`;
-
-export const ContainerWaveRight = styled.div`
-  width: 200px;
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-
-  background: url(${WaveRight}) no-repeat center;
-  background-size: cover;
-  background-position: center;
+  background-image: url(${WaveLeft});
 
   @media (max-width: 767px) {
     display: none;
   }
 `;
 
-export const ContainerImageLogin = styled.div`
-  width: 400px;
-  height: 320px;
+export const ContainerCentral = styled.div`
+  width: 60%;
 
-  background: url(${ImageLogin}) no-repeat center;
-  background-size: contain;
-  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+`;
+
+export const ContainerForm = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+`;
+
+export const ContainerAnimation = styled.div`
+  width: 50%;
+  justify-self: flex-end;
+`;
+
+export const Wave2 = styled.div`
+  width: 20%;
+
+  background-image: url(${WaveRight});
 
   @media (max-width: 767px) {
     display: none;
