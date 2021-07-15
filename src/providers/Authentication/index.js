@@ -14,7 +14,7 @@ export const AuthenticateProvider = ({ children }) => {
 
   const login = (data, history) => {
     api
-      .post("/users", data)
+      .post("/login", data)
       .then((res) => {
         localStorage.removeItem("@ClassApp:token");
         localStorage.setItem(
@@ -32,7 +32,7 @@ export const AuthenticateProvider = ({ children }) => {
 
   const singUp = (data, history) => {
     api
-      .post("/users", data)
+      .post("/register", data)
       .then((response) => {
         console.log("Sucesso ao criar a conta! Faça seu login :D");
         history.push("/login");
