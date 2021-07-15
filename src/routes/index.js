@@ -1,4 +1,5 @@
 import { Switch, Route, useLocation } from "react-router-dom";
+import NotFound from "../pages/NotFound";
 import LandingPage from "../pages/LandingPage";
 import Register from "../pages/Register";
 import RegisterStudent from "../pages/RegisterStudent";
@@ -23,6 +24,9 @@ const Routes = () => {
       </Route>
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="*">
+        <NotFound />
       </Route>
     </Switch>
   );
