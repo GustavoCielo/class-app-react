@@ -14,7 +14,7 @@ import HeaderAndAside from "../../components/HeaderAndAside";
 import { useUsers } from "../../providers/Users";
 import { useCourses } from "../../providers/Courses";
 
-import { useHistory, Redirect } from "react-router-dom";
+import { useHistory, Redirect, Link } from "react-router-dom";
 import { useAuth } from "../../providers/Authentication";
 
 import { motion } from "framer-motion";
@@ -27,13 +27,15 @@ const ProfileTeacher = () => {
 
   const { isLoged } = useAuth();
 
-  if (!isLoged) {
+  if (isLoged() === false) {
     return <Redirect to="/login" />;
   }
 
-  const coursesFiltered = courses.filter((course) => {
-    return course.teacherId === user.id;
+  const coursesOwner = courses.filter((item) => {
+    return item.teacherId === user.id;
   });
+
+  console.log(coursesOwner);
 
   return (
     <motion.div
@@ -54,7 +56,9 @@ const ProfileTeacher = () => {
               </CellRating>
             </RowInformationsUser>
             <RowController>
-              <BackIcon />
+              <Link to="/dashboard">
+                <BackIcon />
+              </Link>
             </RowController>
           </div>
           <div className="descricao estilo-geral">
@@ -66,14 +70,24 @@ const ProfileTeacher = () => {
           <div className="cursos estilo-geral">
             <p className="title">Cursos</p>
             <ul>
-              {coursesFiltered.lenght >= 1
-                ? coursesFiltered.map((courseItem) => {
+              {coursesOwner.length >= 1
+                ? coursesOwner.map((course) => {
                     return (
-                      <li key={courseItem.id}>
+                      <li key={course.id}>
                         <span>
-                          <BulletIcon />
+                          {course.category === "Biológicas" ? (
+                            <BulletIcon color={"green"} />
+                          ) : course.category === "Exatas" ? (
+                            <BulletIcon color={"red"} />
+                          ) : course.category === "Humanas" ? (
+                            <BulletIcon color={"yellow"} />
+                          ) : course.category === "Linguagens" ? (
+                            <BulletIcon color={"blue"} />
+                          ) : (
+                            <BulletIcon color={"pink"} />
+                          )}
                         </span>
-                        <p>{courseItem.name}</p>
+                        <p>{course.name}</p>
                       </li>
                     );
                   })

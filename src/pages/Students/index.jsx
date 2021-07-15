@@ -26,7 +26,7 @@ const PageStudents = ({
 
   const { isLoged } = useAuth();
 
-  if (!isLoged) {
+  if (isLoged() === false) {
     return <Redirect to="/login" />;
   }
 

@@ -9,7 +9,7 @@ export const UsersProvider = ({ children }) => {
 
   const handleUser = () => {
     const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
-    
+
     const decoded = jwt_decode(token);
     const id = decoded.sub;
 
