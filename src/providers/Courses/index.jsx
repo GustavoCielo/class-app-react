@@ -15,12 +15,11 @@ export const CoursesProvider = ({ children }) => {
         },
       })
       .then((response) => setCourses(response.data))
-      .then(() => console.log(courses))
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <CoursesContext.Provider value={{ courses, setCourses }}>
+    <CoursesContext.Provider value={{ courses }}>
       {children}
     </CoursesContext.Provider>
   );
