@@ -8,4 +8,6 @@ export const DivStyled = styled.div`
 
   width: ${({ width }) => width};
   height: ${({ height }) => height};
+  max-width: ${({ maxWidth }) => maxWidth};
+  max-height: ${({ maxHeight }) => maxHeight};
 `;

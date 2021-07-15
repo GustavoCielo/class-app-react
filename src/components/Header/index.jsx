@@ -6,12 +6,11 @@ import { useUsers } from "../../providers/Users";
 import { useEffect } from "react";
 
 const Header = () => {
+  const { user, handleUser } = useUsers();
+  useEffect(() => {
+    handleUser();
+  }, []);
 
-  const {user, handleUser} = useUsers()
-  useEffect(()=> {
-    handleUser()
-  },[])
-  console.log(user)
   return (
     <ContainerHeader>
       <div className="inputContainer">
@@ -33,8 +32,13 @@ const Header = () => {
           </span>
         </div>
         <div className="name">
-         {user.isStudent? <h2>{user.name}</h2>: user.name?<h2>Prof {user.surname}</h2>: <h2>Username</h2>}
-         
+          {user.isStudent ? (
+            <h2>{user.name}</h2>
+          ) : user.name ? (
+            <h2>Prof {user.surname}</h2>
+          ) : (
+            <h2>Username</h2>
+          )}
         </div>
         <div className="imgContainer">
           <img src={imgUser} alt="" />
