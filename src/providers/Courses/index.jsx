@@ -6,6 +6,7 @@ export const CoursesContext = createContext();
 export const CoursesProvider = ({ children }) => {
   const [courses, setCourses] = useState([]);
   const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
+  
 
   useEffect(() => {
     api

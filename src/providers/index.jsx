@@ -7,9 +7,9 @@ const Providers = ({ children }) => {
     <>
       <AuthenticateProvider>
         <CoursesProvider>
-          {/* <UsersProvider> */}
+          <UsersProvider>
           {children}
-          {/* </UsersProvider> */}
+          </UsersProvider>
         </CoursesProvider>
       </AuthenticateProvider>
     </>

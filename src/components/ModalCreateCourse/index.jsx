@@ -17,7 +17,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
-const ModalCreateCourse = () => {
+const ModalCreateCourse = ({handleModal}) => {
   const history = useHistory();
 
   const formSchemaCourse = yup.object().shape({
@@ -47,7 +47,7 @@ const ModalCreateCourse = () => {
     <Container onSubmit={handleSubmit(onSubmitData)}>
       <SubContainer1>
         <Title>Crie seu curso</Title>
-        <IconContainer>
+        <IconContainer onClick={handleModal}>
           <IoIosCloseCircle className="figure" />
         </IconContainer>
       </SubContainer1>

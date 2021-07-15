@@ -1,38 +1,15 @@
-import HeaderAndAside from "../../components/HeaderAndAside";
-import BaseContainer from "../../components/BaseContainer";
-import {
-  SubContainer1,
-  SubContainer2,
-  SubContainer21,
-  SubContainer211,
-  Title,
-} from "./style";
-const Courses = () => {
-  return (
-    <HeaderAndAside page="course">
-      <SubContainer1>
-        <Title>{}</Title>
-      </SubContainer1>
-      <SubContainer2>
-        <SubContainer21>
-          <BaseContainer width="600px;" height="350px">
-            Informações
-          </BaseContainer>
-          <SubContainer211>
-            <BaseContainer width="280px" height="220px">
-              Responsável
-            </BaseContainer>
-            <BaseContainer width="280px" height="220px">
-              Duração
-            </BaseContainer>
-          </SubContainer211>
-        </SubContainer21>
-        <BaseContainer width="330px" height="440px;">
-          Inscritos
-        </BaseContainer>
-      </SubContainer2>
-    </HeaderAndAside>
-  );
-};
+import HeaderAndAside from "../../components/HeaderAndAside"
+import SearchArea from "../../components/SearchArea"
+import FilterCourses from "../../components/FilterCourses"
 
-export default Courses;
+
+const Courses = () => {
+
+return(
+  <HeaderAndAside page="courses">
+    <FilterCourses/>
+    <SearchArea/>
+  </HeaderAndAside>
+)
+}
+export default Courses
