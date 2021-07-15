@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Courses from "../pages/Courses";
 import Course from "../pages/Course";
 import { AnimatePresence } from "framer-motion";
+import Dashboard from "../pages/Dashboard";
 
 const Routes = () => {
   const location = useLocation();
@@ -34,6 +35,9 @@ const Routes = () => {
         </Route>
         <Route path="/course">
           <Course />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
         </Route>
         <Route path="*">
           <NotFound />
