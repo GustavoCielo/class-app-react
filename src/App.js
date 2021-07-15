@@ -1,3 +1,4 @@
+import Configuration from "./pages/Configuration";
 import GlobalStyle from "./styles/global";
 import Routes from "./routes";
 

@@ -1,6 +1,7 @@
-import { DivHeader, ListContainer } from "./style";
+import { DivHeader, ListContainer , Container} from "./style";
 import { useCourses } from "../../providers/Courses";
 import star from "../../assets/star.svg";
+
 
 const SearchArea = () => {
   const { courses } = useCourses();
@@ -13,7 +14,7 @@ const SearchArea = () => {
         <div>VALOR</div>
         <div>AVALIAÇÃO</div>
       </DivHeader>
-
+<Container>
       {courses?.map((item, index) => {
         return (
           <ListContainer key={index}>
@@ -32,6 +33,7 @@ const SearchArea = () => {
           </ListContainer>
         );
       })}
+      </Container>
     </>
   );
 };

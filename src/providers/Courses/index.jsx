@@ -6,6 +6,7 @@ export const CoursesContext = createContext();
 export const CoursesProvider = ({ children }) => {
   const [courses, setCourses] = useState([]);
   const token = JSON.parse(localStorage.getItem("@ClassApp:token")) || null;
+  
 
   useEffect(() => {
     api
@@ -15,12 +16,11 @@ export const CoursesProvider = ({ children }) => {
         },
       })
       .then((response) => setCourses(response.data))
-      .then(() => console.log(courses))
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <CoursesContext.Provider value={{ courses, setCourses }}>
+    <CoursesContext.Provider value={{ courses }}>
       {children}
     </CoursesContext.Provider>
   );

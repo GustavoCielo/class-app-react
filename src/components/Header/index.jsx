@@ -2,8 +2,11 @@ import { ContainerHeader } from "./style";
 import imgUser from "../../assets/icone usuario.png";
 import { BiWallet, BiSearch } from "react-icons/bi";
 import { IconContext } from "react-icons";
+import { useUsers } from "../../providers/Users";
 
 const Header = () => {
+
+  const {user} = useUsers()
   return (
     <ContainerHeader>
       <div className="inputContainer">
@@ -25,7 +28,7 @@ const Header = () => {
           </span>
         </div>
         <div className="name">
-          <p>Prof Jubileu</p>
+         {user.isStudent? <h2>{user.name}</h2>: user.name?<h2>Prof {user.name}</h2>: <h2>Username</h2>}
         </div>
         <div className="imgContainer">
           <img src={imgUser} alt="" />
