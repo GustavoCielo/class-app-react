@@ -4,10 +4,11 @@ import FullContainer from "../../components/FullContainer";
 import LottieAnimation from "../../lottie";
 import distanceEducation from "../../animations/HomeAnimation/distanceEducation.json";
 import { Link } from "react-router-dom";
-
+import Aside from "../../components/Aside";
 const LandingPage = () => {
   return (
     <FullContainer>
+      <Aside />
       <HomeContainer>
         <Container>
           <h1>CLASSAPP</h1>
