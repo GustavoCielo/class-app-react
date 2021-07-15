@@ -7,6 +7,8 @@ import RegisterTeacher from "../pages/RegisterTeacher";
 import Login from "../pages/Login";
 import Courses from "../pages/Courses";
 import Course from "../pages/Course";
+import Student from "../pages/Students";
+import ProfileTeacher from "../pages/ProfileTeacher";
 
 const Routes = () => {
   const location = useLocation();
@@ -32,6 +34,9 @@ const Routes = () => {
       </Route>
       <Route path="/course">
         <Course />
+      </Route>
+      <Route path="/dashboard">
+        <ProfileTeacher />
       </Route>
       <Route path="*">
         <NotFound />

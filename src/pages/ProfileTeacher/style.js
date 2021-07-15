@@ -20,11 +20,12 @@ export const StarIcon = styled(AiFillStar)`
 
 export const BackIcon = styled(FiArrowLeftCircle)`
   font-size: 2.5rem;
+  color: black;
 `;
 
 export const BulletIcon = styled(AiTwotoneInfoCircle)`
-  color: red;
-  background-color: red;
+  color: ${(props) => props.color};
+  background-color: ${(props) => props.color};
   border-radius: 50%;
 `;
 
@@ -69,6 +70,7 @@ export const MainStyled = styled.div`
 
   .descricao {
     grid-area: descricao;
+    overflow-y: scroll;
   }
 
   .cursos {
