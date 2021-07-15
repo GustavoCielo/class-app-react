@@ -6,6 +6,7 @@ import RegisterStudent from "../pages/RegisterStudent";
 import RegisterTeacher from "../pages/RegisterTeacher";
 import Login from "../pages/Login";
 import Courses from "../pages/Courses";
+import Course from "../pages/Course";
 
 const Routes = () => {
   const location = useLocation();
@@ -28,6 +29,9 @@ const Routes = () => {
       </Route>
       <Route path="/courses">
         <Courses />
+      </Route>
+      <Route path="/course">
+        <Course />
       </Route>
       <Route path="*">
         <NotFound />
