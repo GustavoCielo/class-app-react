@@ -23,7 +23,7 @@ import SelectOption from "../SelectOption";
 import Button from "../Button";
 
 import { useAuth } from "../../providers/Authentication";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const FormStudent = () => {
   const history = useHistory();
@@ -69,7 +69,9 @@ const FormStudent = () => {
           <FormRow>
             <TextContainer>
               <h5>Cadastre-se como discente</h5>
-              <IconClose />
+              <Link to="/register" style={{ color: "black" }}>
+                <IconClose />
+              </Link>
             </TextContainer>
           </FormRow>
 
@@ -176,7 +178,13 @@ const FormStudent = () => {
             </Button>
             <div>
               <p>
-                Já possui uma conta? <span>Clique aqui</span> para entrar.
+                Já possui uma conta?{" "}
+                <span>
+                  <Link to="/login" style={{ color: "black" }}>
+                    Clique aqui
+                  </Link>
+                </span>{" "}
+                para entrar.
               </p>
             </div>
           </RowButton>

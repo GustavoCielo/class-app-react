@@ -23,6 +23,7 @@ export const TextContainer = styled.div`
   p {
     font-size: 0.8rem;
     margin-right: 3px;
+    color: black;
   }
 
   h5 {
