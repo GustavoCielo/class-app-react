@@ -14,9 +14,20 @@ import HeaderAndAside from "../../components/HeaderAndAside";
 import { useUsers } from "../../providers/Users";
 import { useCourses } from "../../providers/Courses";
 
+import { useHistory, Redirect } from "react-router-dom";
+import { useAuth } from "../../providers/Authentication";
+
 const ProfileTeacher = () => {
   const { user } = useUsers();
   const { courses } = useCourses();
+
+  const history = useHistory();
+
+  const { isLoged } = useAuth();
+
+  if (!isLoged) {
+    return <Redirect to="/register" />;
+  }
 
   const coursesFiltered = courses.filter((course) => {
     return course.teacherId === user.id;

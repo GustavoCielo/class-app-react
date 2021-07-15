@@ -6,6 +6,9 @@ import ScrollBar from "../../components/ScrollBar";
 import StudentAnimation from "../../animations/StudentAnimation/StudentAnimation.json";
 import LottieAnimation from "../../lottie";
 
+import { useHistory, Redirect } from "react-router-dom";
+import { useAuth } from "../../providers/Authentication";
+
 const PageStudents = ({
   qtdDiscents = 0,
   students = [
@@ -17,6 +20,14 @@ const PageStudents = ({
     },
   ],
 }) => {
+  const history = useHistory();
+
+  const { isLoged } = useAuth();
+
+  if (!isLoged) {
+    return <Redirect to="/register" />;
+  }
+
   return (
     //Falta chamar os dados do context
     <>

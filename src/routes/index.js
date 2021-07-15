@@ -3,6 +3,7 @@ import LandingPage from "../pages/LandingPage";
 import Register from "../pages/Register";
 import RegisterStudent from "../pages/RegisterStudent";
 import RegisterTeacher from "../pages/RegisterTeacher";
+import Login from "../pages/Login";
 
 const Routes = () => {
   const location = useLocation();
@@ -19,6 +20,9 @@ const Routes = () => {
       </Route>
       <Route path="/register/teacher">
         <RegisterTeacher />
+      </Route>
+      <Route path="/login">
+        <Login />
       </Route>
     </Switch>
   );
