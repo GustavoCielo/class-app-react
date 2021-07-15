@@ -13,7 +13,13 @@ import * as yup from "yup";
 import Input from "../Input";
 import Button from "../Button";
 
+import { useAuth } from "../../providers/Authentication";
+import { useHistory } from "react-router-dom";
+
 const FormLogin = () => {
+  const history = useHistory();
+  const { login } = useAuth();
+
   const schema = yup.object().shape({
     email: yup.string().required("Campo obrigatório").email("Email inválido"),
     password: yup
@@ -29,8 +35,7 @@ const FormLogin = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const handleSubmitForm = (data) => {
-    console.log(data);
-    console.log("teste");
+    login(data, history);
   };
 
   return (

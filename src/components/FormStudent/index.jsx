@@ -22,7 +22,13 @@ import InputSelect from "../InputSelect";
 import SelectOption from "../SelectOption";
 import Button from "../Button";
 
+import { useAuth } from "../../providers/Authentication";
+import { useHistory } from "react-router-dom";
+
 const FormStudent = () => {
+  const history = useHistory();
+  const { singUp } = useAuth();
+
   const schema = yup.object().shape({
     name: yup
       .string()
@@ -53,8 +59,7 @@ const FormStudent = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const handleSubmitForm = (data) => {
-    console.log(data);
-    console.log("teste");
+    singUp(data, history);
   };
 
   return (
