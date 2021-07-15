@@ -32,14 +32,16 @@ export const ListContainer = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   align-items: center;
+  cursor: pointer;
   div {
     max-width: 100px;
   }
 `;
 
 export const Container = styled.div`
-  height: 600px;
   width: 100%;
+  height: 70%;
+
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
