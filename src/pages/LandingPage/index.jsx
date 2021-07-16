@@ -5,6 +5,7 @@ import LottieAnimation from "../../lottie";
 import distanceEducation from "../../animations/HomeAnimation/distanceEducation.json";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
 const LandingPage = () => {
   return (
     <motion.div
