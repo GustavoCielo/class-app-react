@@ -1,9 +1,9 @@
 import { OptionStyled } from "./style";
 
-const SelectOption = ({ children }) => {
+const SelectOption = ({ children, value }) => {
   return (
     <>
-      <OptionStyled value={children}>{children}</OptionStyled>
+      <OptionStyled value={value}>{children}</OptionStyled>
     </>
   );
 };
